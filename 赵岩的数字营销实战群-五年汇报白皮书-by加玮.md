@@ -2,7 +2,7 @@
 
 **编制：** 加玮（Alone）  
 **数据周期：** 2021-04-18 — 2026-05-15  
-**图表规范：** [`03-图表规范与清单.md`](03-图表规范与清单.md) · **图片目录：** `assets/charts/` · **GitHub：** [zhaoyan-digital-marketing-5y-whitepaper](https://github.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper)
+**图表规范：** [`03-图表规范与清单.md`](03-图表规范与清单.md) · **图片目录：** `assets/charts/`
 
 **范围：** 数字营销实战 1—7 班（本机可读取聊天记录；地图联创群无本地记录）
 
@@ -22,15 +22,11 @@
 
 ## 核心数据一览
 
-> 下图与表均为 **342,260** 条全量扫描；本地路径 `assets/charts/`，GitHub 同步见仓库 `zhaoyan-digital-marketing-5y-whitepaper`。
+> 全量 **342,260** 条；原始 JSON 见 [`assets/data/manifest.json`](assets/data/manifest.json)。
 
----
+### 行业提及热度
 
-## 6,549 条消息提及 SaaS/企业服务，为行业第一
-
-### 核心数据 · 02 行业提及热度
-
-![行业提及 Top8](assets/charts/c12-industry.png)
+![行业提及 Top8](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c12-industry.png)
 
 | 行业/赛道 | 命中条数 | 占全群 |
 |-----------|----------|--------|
@@ -40,23 +36,13 @@
 | 教育/培训 | 2,090 | 0.6% |
 | 出海/外贸 | 1,669 | 0.5% |
 
-*原始数据：* [`assets/data/manifest.json`](assets/data/manifest.json)
+### 行业占比 × 年
 
----
+![行业占比](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c13-industry-share-year.png)
 
-## 出海提及占比在 2025—2026 逆势升高（行业结构）
+### 痛点场景热度
 
-### 核心数据 · 02 行业占比 × 年
-
-![行业占比 100% 堆叠](assets/charts/c13-industry-share-year.png)
-
----
-
-## 2,045 条命中 SEO/收录类痛点，为五年最高
-
-### 核心数据 · 03 痛点场景热度
-
-![痛点 Top6](assets/charts/c14-pain.png)
+![痛点 Top6](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c14-pain.png)
 
 | 痛点场景 | 命中条数 |
 |----------|----------|
@@ -65,67 +51,21 @@
 | 官网/落地页转化 | 1,416 |
 | 销售与市场互怼 | 960 |
 
----
+### 痛点占比 × 年
 
-## 2025 起 GEO/AI 焦虑占痛点结构第一（占比视角）
+![痛点占比](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c15-pain-share-year.png)
 
-### 核心数据 · 03 痛点占比 × 年
+### L1 议题分布
 
-![痛点占比 100%](assets/charts/c15-pain-share-year.png)
+![L1 议题](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c11-l1-all.png)
 
----
+### 议题占比 × 年 · 结构迁移
 
-## 超过 14,529 条消息命中「线索·销售」；内容品牌 L1 命中 22,833 为最高
+![L1 占比](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c08-l1-share-year.png)
 
-### 核心数据 · 04 L1 议题
-
-![L1 议题分布](assets/charts/c11-l1-all.png)
-
----
-
-## 2026 年 GEO 占营销议题约 19.1%，结构首超线索（8.8%）
-
-### 核心数据 · 04 议题占比 × 年
-
-![L1 占比 100%](assets/charts/c08-l1-share-year.png)
-
-![议题结构桑基图 每年列=100%](assets/charts/c09-l1-sankey-share.png)
-
----
+![议题结构桑基](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c09-l1-sankey-share.png)
 
 # 一、组织全景
-
-## 文本消息占全群 73.2%（250,605 条）
-
-### 第一篇 · 组织全景 · 消息类型
-
-![消息类型](assets/charts/c01-msg-type.png)
-
----
-
-## 5/2/1 班承载约 68% 消息；7 班沉默率 81.3%
-
-### 第一篇 · 组织全景 · 班级与沉默
-
-![各班级消息量](assets/charts/c02-groups.png)
-
-![各班沉默率](assets/charts/c19-silence-by-class.png)
-
----
-
-## 42% 发言者仅发 1—9 条（734 人）
-
-### 第一篇 · 组织全景 · 参与结构
-
-![发言者层级](assets/charts/c03-speaker-tier.png)
-
----
-
-## 10—11 时为发言高峰（合计约 9.6 万条）
-
-### 第一篇 · 组织全景 · 活跃节律
-
-![24小时分布](assets/charts/c18-hours.png)
 
 ## 1.1 规模与结构
 
@@ -138,11 +78,17 @@
 | 链接/文件 | 53,921（15.8%） |
 | 话题性讨论段（≥2 人、间隔 >30 分钟） | 13,187 |
 
+![消息类型构成](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c01-msg-type.png)
+
 **班级体量：** 5 班（83,555）、2 班（78,867）、1 班（72,947）占全群约 **68%**；6 班、7 班体量小但 7 班 GEO 议题浓度高。
+
+![各班级消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c02-groups.png)
 
 **发言结构：** 约 **95** 人发言 ≥500 条（核心贡献层）；**230** 人 100—499 条；**682** 人 10—99 条；**734** 人仅 1—9 条。少数账号驱动多数议题，长尾占大多数。
 
 **沉默率（当前群成员 − 历史发言者）：** 1—5 班约 **28%—38%**；6 班约 **66%**；7 班约 **82%**（小班后入群、围观为主）。
+![各班沉默率](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c19-silence-by-class.png)
+
 
 ## 1.2 活跃特征
 
@@ -151,6 +97,8 @@
 - **高峰月份：** 见第二篇月度 Top15；前两名为 **2021-08、2023-12**。
 - **提问与接力：** 约 **7.5%** 消息含明确问句；**13%** 含引用回复——典型形态为「一人提问 → 多人补全」。
 - **可读文本：** 估计 **304,526** 条（≥12 字），文本平均长度约 **18** 字——短句、接龙、表情后，长文多来自链接卡片或少数核心用户。
+
+![24 小时分布](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c18-hours.png)
 
 ## 1.3 参与结构与人均
 
@@ -161,6 +109,8 @@
 | C 层（10—99 条） | 682 | 39.2% | 偶发深度提问 |
 | D 层（1—9 条） | 734 | 42.1% | 围观、点赞、单次求助 |
 | **合计** | **1,742** | 100% | 人均约 **197** 条/人（中位数远低于均值） |
+
+![发言者层级](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c03-speaker-tier.png)
 
 - **话题段：** 13,187 段（同群、间隔 >30 分钟、≥2 人）；平均每段约 **26** 条消息（段内中位数更低，长尾段拉高均值）。
 - **提问密度：** 含「？」约 **25,793** 条（7.5%）；含引用回复 **44,637** 条（13.0%）——典型为「一人抛场景 → 多人补做法」。
@@ -180,70 +130,6 @@
 
 # 二、五年演变
 
-## 年消息量 2021 峰值 8.0 万，2025 回落至 3.6 万
-
-### 第二篇 · 五年演变 · 年度
-
-![年度消息量](assets/charts/c04-year-volume.png)
-
----
-
-## 单月峰值 2021-08：17,878 条
-
-### 第二篇 · 五年演变 · 月度
-
-![月度 Top15](assets/charts/c05-month-top15.png)
-
----
-
-## 最热季度 2021-Q3：36,581 条
-
-### 第二篇 · 五年演变 · 季度
-
-![季度 Top12](assets/charts/c06-quarter-top12.png)
-
----
-
-## 2021H2、2023H2 为两个半年爆发段
-
-### 第二篇 · 五年演变 · 半年度
-
-![半年度消息量](assets/charts/c07-halfyear.png)
-
----
-
-## 2026 年 GEO 占营销议题约 19.1%，结构首超线索（8.8%）
-
-### 第二篇 · 五年演变 · 议题占比
-
-![L1 占比 100%](assets/charts/c08-l1-share-year.png)
-
-![议题结构桑基图（每年列=100%）](assets/charts/c09-l1-sankey-share.png)
-
----
-
-## 线索/SEO 命中绝对值随总量下降；GEO 2026 逆势抬升
-
-### 第二篇 · 五年演变 · 议题绝对值
-
-![L1 绝对趋势](assets/charts/c10-l1-trend-abs.png)
-
----
-
-## 百度提及 5,629 条；GEO 标签 2026 年 265 条
-
-### 第二篇 · 五年演变 · 渠道
-
-![平台词命中](assets/charts/c21-platform-l2.png)
-
----
-
-## 2026 年 GEO-AI 命中 622 条，约为线索 287 条的 2.2 倍
-
-### 第二篇 · 五年演变 · 2026 结构
-
-![GEO vs 线索 2026](assets/charts/c22-geo-vs-lead-2026.png)
-
 ## 2.1 消息量
 
 | 年份 | 条数 | 发言人数* | 人均条数 | 判断 |
@@ -256,6 +142,8 @@
 | 2026（至 5 月） | 12,764 | — | — | 体量收缩，议题更偏 AI/GEO |
 
 \*分年发言人数见 `02-全量标签统计.md`；全周期 **1,742** 人，人均约 **197** 条（高度右偏）。
+
+![年度消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c04-year-volume.png)
 
 ### 月度爆发 Top15
 
@@ -279,7 +167,15 @@
 
 **节律结论：** 高峰月集中在 **2021 夏—秋** 与 **2023 冬**；2025 后单月再难破 **6,000**（2025 全年最高月亦显著低于上表）。
 
+![月度 Top15](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c05-month-top15.png)
+
 ## 2.2 议题重心迁移
+
+![L1 占比](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c08-l1-share-year.png)
+
+![议题结构桑基](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c09-l1-sankey-share.png)
+
+![议题绝对趋势](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c10-l1-trend-abs.png)
 
 **2021—2022：** 线索定义、百度大搜、SEO 基础、私域/企微、内容是否值得做；赵岩大量输出「市场人认知」「B2B 学习路径」类框架。
 
@@ -308,6 +204,8 @@
 
 2025 年起单季跌破 **1.2 万**（2025-Q4 约 6,736）；2026-Q1 约 8,923，**体量低于高峰季但 GEO 议题占比升高**。
 
+![季度 Top12](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c06-quarter-top12.png)
+
 ### 半年度消息与议题对照
 
 | 半年 | 消息量 | 线索* | 投放* | SEO* | GEO* | 内容* |
@@ -328,6 +226,8 @@
 
 **半年度结论：** **2021H2** 为第一个全量爆发半期（6.3 万条）；**2023H2** 为第二个高峰（4.7 万条）。**2025H2** 起 GEO 半年命中（437）已接近同半年 SEO（666）；**2026H1** GEO（519）**超过**线索（289）与投放（316）——半年尺度上已能确认议题结构变化。
 
+![半年度消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c07-halfyear.png)
+
 ## 2.4 渠道与平台（L2 词频 × 年）
 
 | 平台/渠道 | 全量命中 | 2021 | 2023 | 2025 | 2026 |
@@ -344,11 +244,11 @@
 
 **2021—2024：** 百度 + 官网 + 微信 为默认三角；抖音/小红书随内容品牌 L1 抬升。**2025—2026：** Google、GEO、ChatGPT 权重上升，百度绝对命中随总量下降但仍存在。路径仍是 **大搜验证 → SEO/内容基本盘 → 出海/AI 变量**，而非跳过前两步直接 All in GEO。
 
+![平台/渠道词命中](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c21-platform-l2.png)
+
 ## 2.5 痛点迁移（按年 Top3）
 
-![痛点绝对趋势](assets/charts/c16-pain-trend.png)
-
-![痛点绝对趋势](assets/charts/c16-pain-trend.png)
+![痛点绝对趋势](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c16-pain-trend.png)
 
 | 年 | 痛点 Top3 | 解读 |
 |----|-----------|------|
@@ -358,6 +258,8 @@
 | 2024 | SEO、岗位能力、销售互怼 | 人效与能力模型讨论增加 |
 | 2025 | **GEO/AI**、SEO、投放成本 | 搜索入口焦虑首次登顶 |
 | 2026 | **GEO/AI**、SEO、官网 | GEO 单年命中逼近 2021 全年 SEO 痛点量级 |
+
+![2026 GEO vs 线索](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c22-geo-vs-lead-2026.png)
 
 ## 2.6 各年议题叙事
 
@@ -387,20 +289,6 @@
 
 # 三、参与者
 
-## 赵岩 52,960 条（15.5%）；Zhaoy07331、始熊君分列二三
-
-### 第三篇 · 参与者 · Top10
-
-![发言人 Top10](assets/charts/c17-speakers-top10.png)
-
----
-
-## 赵岩发言 2023 年峰值 12,849 条/年
-
-### 第三篇 · 参与者 · 赵岩
-
-![赵岩 × 年](assets/charts/c20-zhao-by-year.png)
-
 ## 3.1 发言集中度
 
 | 排名 | 昵称 | 条数 | 占全群 |
@@ -412,6 +300,8 @@
 | 5—10 | 司司、邹叔Jerry、雍熙-Paul、R-市场、木辰、牛磊等 | 3,600—7,600 | 各约 1%—2% |
 
 Top10 合计约占全群 **45%** 以上发言。
+
+![发言人 Top10](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c17-speakers-top10.png)
 
 ## 3.2 角色与议题（结论）
 
@@ -448,6 +338,8 @@ Top30 合计约占全群 **55%** 以上发言；Top10 约占 **45%**。
 | 年度 | 2021 6,812 → 2023 峰值 12,849 → 2025 7,510 → 2026（5 月）3,234 |
 | 占全群 | 15.5%；为单一账号绝对第一 |
 | 驱动议题 | 线索定义、B2B 能力模型、招聘/大会、私域 SOP、内容/IP、GEO 提问 |
+
+![赵岩年度发言量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c20-zhao-by-year.png)
 | 链接行为 | 转发招聘、文章、活动频率高；常配一句「大家怎么看」起势 |
 
 赵岩发言 **不集中于某一 L1**，而是 **跨议题定调**：同一段时期内可出现「28 问清单」「营销软件价值在 SOP」「流量转向社交媒体」等框架型判断，再引发学员补案例。2025 年后绝对条数下降，但 **GEO/搜索行为类提问** 仍常由他或接他话头展开。
@@ -490,6 +382,8 @@ Top30 合计约占全群 **55%** 以上发言；Top10 约占 **45%**。
 \*话题段为 baoyu 规则（>30 分钟、≥2 人）下按主题归类估计，与消息级 L1 口径不同；全群共 **13,187** 段。
 
 **L2 高频子标签（全群）：** 引用回复 13.0%、提问 10.0%、百度 1.6%、内容营销 1.0%、官网 0.9%、直播 0.7%、MQL/SQL 0.6%、线索质量 0.1%（字面少、语境多）。
+
+![L1 议题分布](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c11-l1-all.png)
 
 ## 4.1 线索 · 销售 · 转化
 
