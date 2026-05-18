@@ -129,38 +129,6 @@
 
 ![24小时分布](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c18-hours.png)
 
-## 文本消息占全群 73.2%（250,605 条）
-
-### 第一篇 · 组织全景 · 消息类型
-
-![消息类型](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c01-msg-type.png)
-
----
-
-## 5/2/1 班承载约 68% 消息；7 班沉默率 81.3%
-
-### 第一篇 · 组织全景 · 班级与沉默
-
-![各班级消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c02-groups.png)
-
-![各班沉默率](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c19-silence-by-class.png)
-
----
-
-## 42% 发言者仅发 1—9 条（734 人）
-
-### 第一篇 · 组织全景 · 参与结构
-
-![发言者层级](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c03-speaker-tier.png)
-
----
-
-## 10—11 时为发言高峰（合计约 9.6 万条）
-
-### 第一篇 · 组织全景 · 活跃节律
-
-![24小时分布](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c18-hours.png)
-
 ## 1.1 规模与结构
 
 | 指标 | 数值 |
@@ -246,57 +214,15 @@
 
 ---
 
-## 线索/SEO 命中绝对值随总量下降；GEO 2026 逆势抬升
+## 2026 年 GEO 占营销议题约 19.1%，结构首超线索（8.8%）
 
-### 第二篇 · 五年演变 · 议题绝对值
+### 第二篇 · 五年演变 · 议题占比
 
-![L1 绝对趋势](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c10-l1-trend-abs.png)
+![L1 占比 100%](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c08-l1-share-year.png)
 
----
+![议题结构桑基图（每年列=100%）](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c09-l1-sankey-share.png)
 
-## 百度提及 5,629 条；GEO 标签 2026 年 265 条
-
-### 第二篇 · 五年演变 · 渠道
-
-![平台词命中](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c21-platform-l2.png)
-
----
-
-## 2026 年 GEO-AI 命中 622 条，约为线索 287 条的 2.2 倍
-
-### 第二篇 · 五年演变 · 2026 结构
-
-![GEO vs 线索 2026](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c22-geo-vs-lead-2026.png)
-
-## 年消息量 2021 峰值 8.0 万，2025 回落至 3.6 万
-
-### 第二篇 · 五年演变 · 年度
-
-![年度消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c04-year-volume.png)
-
----
-
-## 单月峰值 2021-08：17,878 条
-
-### 第二篇 · 五年演变 · 月度
-
-![月度 Top15](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c05-month-top15.png)
-
----
-
-## 最热季度 2021-Q3：36,581 条
-
-### 第二篇 · 五年演变 · 季度
-
-![季度 Top12](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c06-quarter-top12.png)
-
----
-
-## 2021H2、2023H2 为两个半年爆发段
-
-### 第二篇 · 五年演变 · 半年度
-
-![半年度消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c07-halfyear.png)
+*读桑基图：列高一致，只看带宽占比变化，不看绝对条数递减。*
 
 ---
 
@@ -464,20 +390,6 @@
 ---
 
 # 三、参与者
-
-## 赵岩 52,960 条（15.5%）；Zhaoy07331、始熊君分列二三
-
-### 第三篇 · 参与者 · Top10
-
-![发言人 Top10](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c17-speakers-top10.png)
-
----
-
-## 赵岩发言 2023 年峰值 12,849 条/年
-
-### 第三篇 · 参与者 · 赵岩
-
-![赵岩 × 年](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c20-zhao-by-year.png)
 
 ## 赵岩 52,960 条（15.5%）；Zhaoy07331、始熊君分列二三
 

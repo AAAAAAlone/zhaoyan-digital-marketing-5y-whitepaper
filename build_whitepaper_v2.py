@@ -240,6 +240,10 @@ def main():
         pos = text.find(anchor)
         if pos < 0:
             continue
+        # Idempotent: skip if first subsection of inject already present
+        marker = ins.split("\n", 2)[1].strip() if ins else ""
+        if marker and marker in text:
+            continue
         if block.get("insert_after"):
             line_end = text.find("\n", pos)
             text = text[: line_end + 1] + "\n" + ins + "\n" + text[line_end + 1 :]
