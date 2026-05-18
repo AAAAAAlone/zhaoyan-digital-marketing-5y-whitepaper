@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>赵岩的数字营销实战群 · 五年白皮书 · 完整可视化</title>
+<title>赵岩的数字营销实战群 · 五年白皮书</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -436,6 +436,28 @@
     .pipeline{grid-template-columns:repeat(2,1fr)}
     .grid-2-7-5,.grid-2-6-6,.grid-2-8-4{grid-template-columns:1fr}
   }
+
+  .slide.slide-dense{padding:4.5vh 5vw 8vh 5vw}
+  .slide.slide-dense::before{background:rgba(var(--paper-rgb),.88)}
+  .slide.slide-dense.dark::before{background:rgba(var(--ink-rgb),.88)}
+  .slide.slide-dense .dense-body{flex:1;display:flex;min-height:0;gap:2vw;margin-top:1vh}
+  .slide.slide-dense.layout-stack .dense-body{flex-direction:column}
+  .slide.slide-dense.layout-split .dense-body{flex-direction:row;align-items:stretch}
+  .slide.slide-dense .dense-head{flex:0 0 auto;display:flex;flex-direction:column;gap:.8vh;max-height:32vh}
+  .slide.slide-dense.layout-split .dense-head{width:36%;min-width:28%;max-height:none;padding-right:1vw}
+  .slide.slide-dense .dense-title{font-family:var(--serif-zh);font-weight:700;font-size:clamp(1.15rem,2.55vw,2.15rem);line-height:1.14;letter-spacing:-.01em}
+  .slide.slide-dense .dense-lead{font-family:var(--sans-zh);font-size:max(13px,.95vw);line-height:1.45;opacity:.82}
+  .slide.slide-dense .dense-points{margin:.4vh 0 0;padding-left:1.15em;font-family:var(--sans-zh);font-size:max(12px,.88vw);line-height:1.42;opacity:.88}
+  .slide.slide-dense .dense-points li{margin-bottom:.28em}
+  .slide.slide-dense .dense-media{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:transparent}
+  .slide.slide-dense.layout-stack .dense-media{min-height:48vh}
+  .slide.slide-dense.layout-split .dense-media{width:64%}
+  .slide.slide-dense .dense-media img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+  .slide.slide-dense .kicker{margin-bottom:.6vh}
+  .slide.slide-dense .rowline{padding:1.4vh 0}
+  .slide.slide-dense .rowline .k{font-size:max(13px,1.05vw)}
+  .slide.slide-dense .rowline .v{font-size:max(12px,.9vw)}
+
 </style>
 </head>
 <body>
@@ -452,626 +474,899 @@
      页面组件参考 references/components.md
      ============================================================ -->
 
+<section class="slide hero light">
+  <div class="chrome"><div>一、组织全景</div><div>01/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2.5vh">
+    <div class="kicker" data-anim>一、组织全景</div>
+    <h1 class="display-zh" data-anim>组织全景</h1>
+    <p class="lead" data-anim></p>
+  </div>
+  <div class="foot"><div>一、组织全景</div><div>01/68</div></div>
+</section>
+
 <section class="slide hero dark">
-  <div class="chrome"><div>封面</div><div>01/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:3vh">
+  <div class="chrome"><div>二、五年演变</div><div>02/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2.5vh">
+    <div class="kicker" data-anim>二、五年演变</div>
+    <h1 class="display-zh" data-anim>五年演变</h1>
+    <p class="lead" data-anim></p>
+  </div>
+  <div class="foot"><div>二、五年演变</div><div>02/68</div></div>
+</section>
+
+<section class="slide hero light">
+  <div class="chrome"><div>三、参与者</div><div>03/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2.5vh">
+    <div class="kicker" data-anim>三、参与者</div>
+    <h1 class="display-zh" data-anim>参与者</h1>
+    <p class="lead" data-anim></p>
+  </div>
+  <div class="foot"><div>三、参与者</div><div>03/68</div></div>
+</section>
+
+<section class="slide hero dark">
+  <div class="chrome"><div>四、讨论内容与方向</div><div>04/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2.5vh">
+    <div class="kicker" data-anim>四、讨论内容与方向</div>
+    <h1 class="display-zh" data-anim>讨论内容与方向</h1>
+    <p class="lead" data-anim></p>
+  </div>
+  <div class="foot"><div>四、讨论内容与方向</div><div>04/68</div></div>
+</section>
+
+<section class="slide hero light">
+  <div class="chrome"><div>五、资料与链接</div><div>05/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2.5vh">
+    <div class="kicker" data-anim>五、资料与链接</div>
+    <h1 class="display-zh" data-anim>资料与链接</h1>
+    <p class="lead" data-anim></p>
+  </div>
+  <div class="foot"><div>五、资料与链接</div><div>05/68</div></div>
+</section>
+
+<section class="slide hero dark">
+  <div class="chrome"><div>六、核心结论与代表性原话</div><div>06/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2.5vh">
+    <div class="kicker" data-anim>六、核心结论与代表性原话</div>
+    <h1 class="display-zh" data-anim>核心结论与代表性原话</h1>
+    <p class="lead" data-anim></p>
+  </div>
+  <div class="foot"><div>六、核心结论与代表性原话</div><div>06/68</div></div>
+</section>
+
+<section class="slide hero dark">
+  <div class="chrome"><div>封面</div><div>07/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2.5vh">
     <div class="kicker" data-anim>封面</div>
-    <h1 class="h-hero" style="font-size:clamp(2rem,6vw,5rem)" data-anim>342,260 条消息构成一部 ToB 营销活体案例库</h1>
-    <p class="lead" data-anim>赵岩的数字营销实战群 · 2021—2026</p>
+    <h1 class="display-zh" data-anim>342,260 条消息 · 赵岩数字营销实战群五年白皮书</h1>
+    <p class="lead" data-anim>2021-04 — 2026-05 · 七班全量</p>
   </div>
-  <div class="foot"><div>封面</div><div>01/52</div></div>
+  <div class="foot"><div>封面</div><div>07/68</div></div>
 </section>
 
-<section class="slide light">
-  <div class="chrome"><div>读图说明</div><div>02/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>读图说明</div>
-    <h2 class="h-xl" data-anim>结构变化看占比（每年 100%），体量看绝对值</h2>
-    <p class="lead" data-anim>桑基图列高一致；带宽=议题占比迁移</p>
-  </div>
-  <div class="foot"><div>读图说明</div><div>02/52</div></div>
+<section class="slide light slide-dense layout-split">
+  <div class="chrome"><div>核心数据 · 02 行业提及热度</div><div>08/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">核心数据 · 02 行业提及热度</div>
+      <h2 class="dense-title">6,549 条消息提及 SaaS/企业服务，为行业第一</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c12-industry-light.png" alt=""></div>
+    </div>
+  <div class="foot"><div>02 行业提及热度</div><div>08/68</div></div>
 </section>
 
-<section class="slide hero light">
-  <div class="chrome"><div>Act I · 组织全景</div><div>03/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:3vh">
-    <div class="kicker" data-anim>Act I · 组织全景</div>
-    <h1 class="h-hero" style="font-size:clamp(2rem,6vw,5rem)" data-anim>第一篇</h1>
-    <p class="lead" data-anim>消息 · 班级 · 参与者 · 节律</p>
-  </div>
-  <div class="foot"><div>组织全景</div><div>03/52</div></div>
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>核心数据 · 02 行业占比 × 年</div><div>09/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">核心数据 · 02 行业占比 × 年</div>
+      <h2 class="dense-title">出海提及占比在 2025—2026 逆势升高（行业结构）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c13-industry-share.png" alt=""></div>
+    </div>
+  <div class="foot"><div>02 行业占比 × 年</div><div>09/68</div></div>
 </section>
 
-<section class="slide light">
-  <div class="chrome"><div>第一篇 · 组织全景</div><div>04/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第一篇 · 组织全景</div>
-    <h2 class="h-xl" data-anim>文本消息占全群 73.2%（250,605 条）</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c01-msg-type.png" alt="文本消息占全群 73.2%（250,605 条）">
-    </figure>
-  </div>
-  <div class="foot"><div>组织全景</div><div>04/52</div></div>
+<section class="slide dark slide-dense layout-split">
+  <div class="chrome"><div>核心数据 · 03 痛点场景热度</div><div>10/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">核心数据 · 03 痛点场景热度</div>
+      <h2 class="dense-title">2,045 条命中 SEO/收录类痛点，为五年最高</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c14-pain-dark.png" alt=""></div>
+    </div>
+  <div class="foot"><div>03 痛点场景热度</div><div>10/68</div></div>
 </section>
 
-<section class="slide dark">
-  <div class="chrome"><div>第一篇 · 组织全景</div><div>05/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第一篇 · 组织全景</div>
-    <h2 class="h-xl" data-anim>5/2/1 班承载约 68% 消息量</h2>
-    <p class="lead" style="margin-bottom:1.5vh" data-anim>5班 83,555 · 2班 78,867 · 1班 72,947</p>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c02-groups.png" alt="5/2/1 班承载约 68% 消息量">
-    </figure>
-  </div>
-  <div class="foot"><div>组织全景</div><div>05/52</div></div>
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>核心数据 · 03 痛点占比 × 年</div><div>11/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">核心数据 · 03 痛点占比 × 年</div>
+      <h2 class="dense-title">2025 起 GEO/AI 焦虑占痛点结构第一（占比视角）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c15-pain-share.png" alt=""></div>
+    </div>
+  <div class="foot"><div>03 痛点占比 × 年</div><div>11/68</div></div>
 </section>
 
-<section class="slide dark">
-  <div class="chrome"><div>第一篇 · 组织全景</div><div>06/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第一篇 · 组织全景</div>
-    <h2 class="h-xl" data-anim>7 班沉默率 81.3%，不宜与 1—5 班比活跃</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c19-silence-by-class.png" alt="7 班沉默率 81.3%，不宜与 1—5 班比活跃">
-    </figure>
-  </div>
-  <div class="foot"><div>组织全景</div><div>06/52</div></div>
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>核心数据 · 04 L1 议题</div><div>12/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">核心数据 · 04 L1 议题</div>
+      <h2 class="dense-title">超过 14,529 条消息命中「线索·销售」；内容品牌 L1 命中 22,833 为最高</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c11-l1.png" alt=""></div>
+    </div>
+  <div class="foot"><div>04 L1 议题</div><div>12/68</div></div>
 </section>
 
-<section class="slide light">
-  <div class="chrome"><div>第一篇 · 组织全景</div><div>07/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第一篇 · 组织全景</div>
-    <h2 class="h-xl" data-anim>42% 发言者仅发 1—9 条（734 人）</h2>
-    <p class="lead" style="margin-bottom:1.5vh" data-anim>围观层大于核心层人数</p>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c03-speaker-tier.png" alt="42% 发言者仅发 1—9 条（734 人）">
-    </figure>
-  </div>
-  <div class="foot"><div>组织全景</div><div>07/52</div></div>
+<section class="slide dark slide-dense layout-stack">
+  <div class="chrome"><div>核心数据 · 04 议题占比 × 年</div><div>13/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">核心数据 · 04 议题占比 × 年</div>
+      <h2 class="dense-title">2026 年 GEO 占营销议题约 19.1%，结构首超线索（8.8%）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c08-l1-share.png" alt=""></div>
+    </div>
+  <div class="foot"><div>04 议题占比 × 年</div><div>13/68</div></div>
 </section>
 
-<section class="slide light">
-  <div class="chrome"><div>第一篇 · 活跃节律</div><div>08/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第一篇 · 活跃节律</div>
-    <h2 class="h-xl" data-anim>10—11 时为发言高峰（合计约 9.6 万条）</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c18-hours.png" alt="10—11 时为发言高峰（合计约 9.6 万条）">
-    </figure>
-  </div>
-  <div class="foot"><div>活跃节律</div><div>08/52</div></div>
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>核心数据 · 04 议题占比 × 年</div><div>14/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">核心数据 · 04 议题占比 × 年</div>
+      <h2 class="dense-title">2026 年 GEO 占营销议题约 19.1%，结构首超线索（8.8%）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c09-l1-sankey.png" alt=""></div>
+    </div>
+  <div class="foot"><div>04 议题占比 × 年</div><div>14/68</div></div>
 </section>
 
-<section class="slide light">
-  <div class="chrome"><div>第一篇 · 组织数据表</div><div>09/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第一篇 · 组织数据表</div>
-    <h2 class="h-xl" data-anim>1,742 发言人 · 1,630 活跃日 · 链接占 15.8%</h2>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="k">总消息</div><div class="v">342,260</div></div>
-<div class="rowline"><div class="k">文本</div><div class="v">250,605 (73.2%)</div></div>
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第一篇 · 组织全景 · 消息类型</div><div>15/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第一篇 · 组织全景 · 消息类型</div>
+      <h2 class="dense-title">文本消息占全群 73.2%（250,605 条）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c01-msg.png" alt=""></div>
+    </div>
+  <div class="foot"><div>消息类型</div><div>15/68</div></div>
+</section>
+
+<section class="slide dark slide-dense layout-split">
+  <div class="chrome"><div>第一篇 · 组织全景 · 班级与沉默</div><div>16/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第一篇 · 组织全景 · 班级与沉默</div>
+      <h2 class="dense-title">5/2/1 班承载约 68% 消息；7 班沉默率 81.3%</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c02-groups-dark.png" alt=""></div>
+    </div>
+  <div class="foot"><div>班级与沉默</div><div>16/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第一篇 · 组织全景 · 班级与沉默</div><div>17/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第一篇 · 组织全景 · 班级与沉默</div>
+      <h2 class="dense-title">5/2/1 班承载约 68% 消息；7 班沉默率 81.3%</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c19-silence-by.png" alt=""></div>
+    </div>
+  <div class="foot"><div>班级与沉默</div><div>17/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第一篇 · 组织全景 · 参与结构</div><div>18/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第一篇 · 组织全景 · 参与结构</div>
+      <h2 class="dense-title">42% 发言者仅发 1—9 条（734 人）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c03-speaker.png" alt=""></div>
+    </div>
+  <div class="foot"><div>参与结构</div><div>18/68</div></div>
+</section>
+
+<section class="slide dark slide-dense layout-stack">
+  <div class="chrome"><div>第一篇 · 组织全景 · 活跃节律</div><div>19/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第一篇 · 组织全景 · 活跃节律</div>
+      <h2 class="dense-title">10—11 时为发言高峰（合计约 9.6 万条）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c18-hours-dark.png" alt=""></div>
+    </div>
+  <div class="foot"><div>活跃节律</div><div>19/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>1.1 规模与结构</div><div>20/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">1.1 规模与结构</div>
+      <h2 class="dense-title">1.1 规模与结构</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">消息总量</div><div class="v">342,260</div></div>
+<div class="rowline"><div class="k">发言者（昵称归一后）</div><div class="v">1,742</div></div>
+<div class="rowline"><div class="k">有消息的自然日</div><div class="v">1,630</div></div>
+<div class="rowline"><div class="k">文本消息</div><div class="v">250,605（73.2%）</div></div>
+<div class="rowline"><div class="k">链接/文件</div><div class="v">53,921（15.8%）</div></div>
+<div class="rowline"><div class="k">话题性讨论段（≥2 人、间隔 >30 分钟）</div><div class="v">13,187</div></div>
+</div></div>
+  <div class="foot"><div>1.1 规模与结构</div><div>20/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>1.3 参与结构与人均</div><div>21/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">1.3 参与结构与人均</div>
+      <h2 class="dense-title">1.3 参与结构与人均</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">层级</div><div class="v">人数</div></div>
+<div class="rowline"><div class="k">A 层（≥500 条）</div><div class="v">95</div></div>
+<div class="rowline"><div class="k">B 层（100—499 条）</div><div class="v">230</div></div>
+<div class="rowline"><div class="k">C 层（10—99 条）</div><div class="v">682</div></div>
+<div class="rowline"><div class="k">D 层（1—9 条）</div><div class="v">734</div></div>
+<div class="rowline"><div class="k">**合计**</div><div class="v">**1,742**</div></div>
+</div></div>
+  <div class="foot"><div>1.3 参与结构与人均</div><div>21/68</div></div>
+</section>
+
+<section class="slide dark slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 年度</div><div>22/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 年度</div>
+      <h2 class="dense-title">年消息量 2021 峰值 8.0 万，2025 回落至 3.6 万</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c04-year.png" alt=""></div>
+    </div>
+  <div class="foot"><div>年度</div><div>22/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 月度</div><div>23/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 月度</div>
+      <h2 class="dense-title">单月峰值 2021-08：17,878 条</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c05-month.png" alt=""></div>
+    </div>
+  <div class="foot"><div>月度</div><div>23/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 季度</div><div>24/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 季度</div>
+      <h2 class="dense-title">最热季度 2021-Q3：36,581 条</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c06-quarter.png" alt=""></div>
+    </div>
+  <div class="foot"><div>季度</div><div>24/68</div></div>
+</section>
+
+<section class="slide dark slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 半年度</div><div>25/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 半年度</div>
+      <h2 class="dense-title">2021H2、2023H2 为两个半年爆发段</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c07-halfyear-dark.png" alt=""></div>
+    </div>
+  <div class="foot"><div>半年度</div><div>25/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 议题占比</div><div>26/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 议题占比</div>
+      <h2 class="dense-title">2026 年 GEO 占营销议题约 19.1%，结构首超线索（8.8%）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c08-l1-share.png" alt=""></div>
+    </div>
+  <div class="foot"><div>议题占比</div><div>26/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 议题占比</div><div>27/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 议题占比</div>
+      <h2 class="dense-title">2026 年 GEO 占营销议题约 19.1%，结构首超线索（8.8%）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c09-l1-sankey.png" alt=""></div>
+    </div>
+  <div class="foot"><div>议题占比</div><div>27/68</div></div>
+</section>
+
+<section class="slide dark slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 议题绝对值</div><div>28/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 议题绝对值</div>
+      <h2 class="dense-title">线索/SEO 命中绝对值随总量下降；GEO 2026 逆势抬升</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c10-l1-trend.png" alt=""></div>
+    </div>
+  <div class="foot"><div>议题绝对值</div><div>28/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 渠道</div><div>29/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 渠道</div>
+      <h2 class="dense-title">百度提及 5,629 条；GEO 标签 2026 年 265 条</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c21-platform.png" alt=""></div>
+    </div>
+  <div class="foot"><div>渠道</div><div>29/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第二篇 · 五年演变 · 2026 结构</div><div>30/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第二篇 · 五年演变 · 2026 结构</div>
+      <h2 class="dense-title">2026 年 GEO-AI 命中 622 条，约为线索 287 条的 2.2 倍</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c22-geo-vs-lead.png" alt=""></div>
+    </div>
+  <div class="foot"><div>2026 结构</div><div>30/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>月度爆发 Top15</div><div>31/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">月度爆发 Top15</div>
+      <h2 class="dense-title">2.1 消息量</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">年份</div><div class="v">条数</div></div>
+<div class="rowline"><div class="k">2021</div><div class="v">80,239</div></div>
+<div class="rowline"><div class="k">2022</div><div class="v">67,144</div></div>
+<div class="rowline"><div class="k">2023</div><div class="v">73,610</div></div>
+<div class="rowline"><div class="k">2024</div><div class="v">72,610</div></div>
+<div class="rowline"><div class="k">2025</div><div class="v">35,893</div></div>
+<div class="rowline"><div class="k">2026（至 5 月）</div><div class="v">12,764</div></div>
+<div class="rowline"><div class="k">月份</div><div class="v">条数</div></div>
+</div></div>
+  <div class="foot"><div>月度爆发 Top15</div><div>31/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>半年度消息与议题对照</div><div>32/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">半年度消息与议题对照</div>
+      <h2 class="dense-title">2.3 季度节奏（消息量 Top12）</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">季度</div><div class="v">条数</div></div>
+<div class="rowline"><div class="k">2021-Q3</div><div class="v">36,581</div></div>
+<div class="rowline"><div class="k">2023-Q4</div><div class="v">26,689</div></div>
+<div class="rowline"><div class="k">2021-Q4</div><div class="v">26,496</div></div>
+<div class="rowline"><div class="k">2022-Q2</div><div class="v">23,057</div></div>
+<div class="rowline"><div class="k">2024-Q1</div><div class="v">22,394</div></div>
+<div class="rowline"><div class="k">2023-Q3</div><div class="v">20,628</div></div>
+<div class="rowline"><div class="k">2022-Q1</div><div class="v">20,260</div></div>
+</div></div>
+  <div class="foot"><div>半年度消息与议题对照</div><div>32/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>2.4 渠道与平台（L2 词频 × 年）</div><div>33/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">2.4 渠道与平台（L2 词频 × 年）</div>
+      <h2 class="dense-title">2.4 渠道与平台（L2 词频 × 年）</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">平台/渠道</div><div class="v">全量命中</div></div>
+<div class="rowline"><div class="k">百度</div><div class="v">5,629</div></div>
+<div class="rowline"><div class="k">微信</div><div class="v">3,468</div></div>
+<div class="rowline"><div class="k">官网/落地页</div><div class="v">3,145</div></div>
+<div class="rowline"><div class="k">抖音</div><div class="v">2,209</div></div>
+<div class="rowline"><div class="k">直播</div><div class="v">2,344</div></div>
+<div class="rowline"><div class="k">Google</div><div class="v">1,512</div></div>
+<div class="rowline"><div class="k">小红书</div><div class="v">1,439</div></div>
+</div></div>
+  <div class="foot"><div>2.4 渠道与平台（L2</div><div>33/68</div></div>
+</section>
+
+<section class="slide dark slide-dense layout-stack">
+  <div class="chrome"><div>2.5 痛点迁移（按年 Top3）</div><div>34/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">2.5 痛点迁移（按年 Top3）</div>
+      <h2 class="dense-title">2.5 痛点迁移（按年 Top3）</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c16-pain.png" alt=""></div>
+    </div>
+  <div class="foot"><div>2.5 痛点迁移（按年 </div><div>34/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第三篇 · 参与者 · Top10</div><div>35/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第三篇 · 参与者 · Top10</div>
+      <h2 class="dense-title">赵岩 52,960 条（15.5%）；Zhaoy07331、始熊君分列二三</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c17-speakers.png" alt=""></div>
+    </div>
+  <div class="foot"><div>Top10</div><div>35/68</div></div>
+</section>
+
+<section class="slide light slide-dense layout-stack">
+  <div class="chrome"><div>第三篇 · 参与者 · 赵岩</div><div>36/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第三篇 · 参与者 · 赵岩</div>
+      <h2 class="dense-title">赵岩发言 2023 年峰值 12,849 条/年</h2>
+      
+      
+    </div>
+    <div class="dense-media" data-anim><img src="images/c20-zhao-by.png" alt=""></div>
+    </div>
+  <div class="foot"><div>赵岩</div><div>36/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>3.1 发言集中度</div><div>37/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">3.1 发言集中度</div>
+      <h2 class="dense-title">3.1 发言集中度</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">排名</div><div class="v">昵称</div></div>
+<div class="rowline"><div class="k">1</div><div class="v">赵岩</div></div>
+<div class="rowline"><div class="k">2</div><div class="v">Zhaoy07331</div></div>
+<div class="rowline"><div class="k">3</div><div class="v">始熊君</div></div>
+<div class="rowline"><div class="k">4</div><div class="v">加玮（Alone）</div></div>
+<div class="rowline"><div class="k">5—10</div><div class="v">司司、邹叔Jerry、雍熙-Paul、R-市场、木辰、牛磊等</div></div>
+</div></div>
+  <div class="foot"><div>3.1 发言集中度</div><div>37/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>3.3 发言人 Top30（扩展）</div><div>38/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">3.3 发言人 Top30（扩展）</div>
+      <h2 class="dense-title">3.3 发言人 Top30（扩展）</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">排名</div><div class="v">昵称</div></div>
+<div class="rowline"><div class="k">1</div><div class="v">赵岩</div></div>
+<div class="rowline"><div class="k">2</div><div class="v">Zhaoy07331</div></div>
+<div class="rowline"><div class="k">3</div><div class="v">始熊君</div></div>
+<div class="rowline"><div class="k">4</div><div class="v">加玮（Alone）</div></div>
+<div class="rowline"><div class="k">5</div><div class="v">司司_品牌副总监_乐尔环境</div></div>
+<div class="rowline"><div class="k">6</div><div class="v">邹叔Jerry</div></div>
+<div class="rowline"><div class="k">7</div><div class="v">上海雍熙-Paul</div></div>
+</div></div>
+  <div class="foot"><div>3.3 发言人 Top3</div><div>38/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>3.4 赵岩（52,960 条）</div><div>39/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">3.4 赵岩（52,960 条）</div>
+      <h2 class="dense-title">3.4 赵岩（52,960 条）</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">维度</div><div class="v">数据/结论</div></div>
+<div class="rowline"><div class="k">年度</div><div class="v">2021 6,812 → 2023 峰值 12,849 → 2025 7,510 → 2026（5 月）3,234</div></div>
+<div class="rowline"><div class="k">占全群</div><div class="v">15.5%；为单一账号绝对第一</div></div>
+<div class="rowline"><div class="k">驱动议题</div><div class="v">线索定义、B2B 能力模型、招聘/大会、私域 SOP、内容/IP、GEO 提问</div></div>
+<div class="rowline"><div class="k">链接行为</div><div class="v">转发招聘、文章、活动频率高；常配一句「大家怎么看」起势</div></div>
+</div></div>
+  <div class="foot"><div>3.4 赵岩（52,96</div><div>39/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.0</div><div>40/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.0</div>
+      <h2 class="dense-title">4.0 议题总览矩阵</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">L1 方向</div><div class="v">消息命中</div></div>
+<div class="rowline"><div class="k">线索 · 销售</div><div class="v">14,529</div></div>
+<div class="rowline"><div class="k">内容 · 品牌</div><div class="v">22,833</div></div>
+<div class="rowline"><div class="k">SEO · 搜索</div><div class="v">13,492</div></div>
+<div class="rowline"><div class="k">投放 · 广告</div><div class="v">9,766</div></div>
+<div class="rowline"><div class="k">工具 · SaaS</div><div class="v">9,646</div></div>
+<div class="rowline"><div class="k">课程 · 活动</div><div class="v">10,981</div></div>
+<div class="rowline"><div class="k">GEO · AI</div><div class="v">2,569</div></div>
+</div></div>
+  <div class="foot"><div>4.0</div><div>40/68</div></div>
+</section>
+
+<section class="slide dark slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.1</div><div>41/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.1</div>
+      <h2 class="dense-title">4.1 线索 · 销售 · 转化</h2>
+      <p class="dense-lead">L1 命中 **14,529**（4.2%）；2022—2023 为高峰（各约 3,550）；5 班线索 L1 **4,106** 为单班最高。痛点「销售互怼」**960** 条；字面「线索不准」**150** 条——大量讨论包在「线索运营</p>
+      <ul class="dense-points" data-anim><li>L1 命中 **14,529**（4.2%）；2022—2023 为高峰（各约 3,550）；5 班线索 L1 **4,106** 为单班最高。痛点「销售互怼」**960** 条；字面「线索不准」**150** 条——大量讨论包在「线索运营」宽口径内。</li><li>百度/官网来的线索「不准」：是词路错了、落地页错了，还是根本没有目标客户。</li><li>晨曦类提问：「没找到客户」还是「客户不存在」——代表大量 ToB 市场人的真实困惑。</li><li>销售抱怨线索差、市场抱怨销售不跟；公海、跟进频率、甩锅。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.1</div><div>41/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.2</div><div>42/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.2</div>
+      <h2 class="dense-title">4.2 投放 · SEM · 广告</h2>
+      <p class="dense-lead">L1 **9,766**（2.9%）；L2 百度 **5,629**、oCPC **295**、CPC **42**；痛点「投放成本」**422**。5 班投放 L1 **2,600** 与 2 班 **2,049** 为投放讨论最多的两个</p>
+      <ul class="dense-points" data-anim><li>L1 **9,766**（2.9%）；L2 百度 **5,629**、oCPC **295**、CPC **42**；痛点「投放成本」**422**。5 班投放 L1 **2,600** 与 2 班 **2,049** 为投放讨论最多的两个班。</li><li>百度大搜：oCPC 单价极高、主词抢不到、长尾是否值得。</li><li>基木鱼 vs 官网落地页转化孰高。</li><li>抖音/信息流是否适合 ToB；蓝 V、营销内容审核。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.2</div><div>42/68</div></div>
+</section>
+
+<section class="slide dark slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.3</div><div>43/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.3</div>
+      <h2 class="dense-title">4.3 SEO · 网站 · 搜索</h2>
+      <p class="dense-lead">L1 **13,492**（3.9%）；痛点「SEO 收录/排名」**2,045** 为五年痛点第一。始熊君、布衣-SEO、Zhaoy07331 为高频发言角色。制造、知识产权等行业案例常在本议题下展开。</p>
+      <ul class="dense-points" data-anim><li>L1 **13,492**（3.9%）；痛点「SEO 收录/排名」**2,045** 为五年痛点第一。始熊君、布衣-SEO、Zhaoy07331 为高频发言角色。制造、知识产权等行业案例常在本议题下展开。</li><li>收录、爬虫、TDK、H1/H2、外链工具准不准。</li><li>移动端 vs PC、自适应 vs 独立 M 站。</li><li>行业词首页难、长尾海量是否精准。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.3</div><div>43/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.4</div><div>44/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.4</div>
+      <h2 class="dense-title">4.4 GEO · AI · 大模型</h2>
+      <p class="dense-lead">L1 **2,569**；2026 年单年 **622**，已超过同年线索 L1（287）。L2 GEO **450**、ChatGPT **564**；痛点「GEO/AI 焦虑」**1,516**，其中 **2025 741 + 2026</p>
+      <ul class="dense-points" data-anim><li>L1 **2,569**；2026 年单年 **622**，已超过同年线索 L1（287）。L2 GEO **450**、ChatGPT **564**；痛点「GEO/AI 焦虑」**1,516**，其中 **2025 741 + 2026 735**。7 班 GEO-AI L1…</li><li>ChatGPT 工作流、提示词、是否取代搜索。</li><li>GEO、AI 搜索可见性、品牌在 AI 答案里是否被提及。</li><li>运营岗位是否还要学剪辑/设计/投放一条龙。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.4</div><div>44/68</div></div>
+</section>
+
+<section class="slide dark slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.5</div><div>45/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.5</div>
+      <h2 class="dense-title">4.5 出海 · 跨境</h2>
+      <p class="dense-lead">L1 **2,981**；2024 命中 **578** 为五年最高；行业标签「出海/外贸」**1,669**，2025—2026 仍居行业 Top5。与 Google L2（**1,512**）高度重叠。</p>
+      <ul class="dense-points" data-anim><li>L1 **2,981**；2024 命中 **578** 为五年最高；行业标签「出海/外贸」**1,669**，2025—2026 仍居行业 Top5。与 Google L2（**1,512**）高度重叠。</li><li>出海大会、官网本地化、海外招聘。</li><li>Google、独立站、utm 与 GA 归因。</li><li>人力资源/营销双线汇报岗位。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.5</div><div>45/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.6</div><div>46/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.6</div>
+      <h2 class="dense-title">4.6 私域 · 企微 · 社群</h2>
+      <p class="dense-lead">L1 **4,189**（1.2%）；2021 命中 **1,146** 为五年最高，之后逐年下降（2026 仅 **23**）。痛点「私域/企微触达」**598**。与课程活动、红包促活讨论常重叠。</p>
+      <ul class="dense-points" data-anim><li>L1 **4,189**（1.2%）；2021 命中 **1,146** 为五年最高，之后逐年下降（2026 仅 **23**）。痛点「私域/企微触达」**598**。与课程活动、红包促活讨论常重叠。</li><li>企微群发频次限制、私域 SOP、社群分层（行业/岗位）。</li><li>五个群如何拆、人数少不分组人多分组难。</li><li>短信/AI 外呼与温度。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.6</div><div>46/68</div></div>
+</section>
+
+<section class="slide dark slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.7</div><div>47/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.7</div>
+      <h2 class="dense-title">4.7 内容 · 品牌 · 短视频</h2>
+      <p class="dense-lead">L1 **22,833** 为营销类最高（含大量「内容」口语命中，需与纯闲聊区分）；2023—2024 各约 **3,650**。L2 直播 **2,344**、抖音 **2,209**、小红书 **1,439**、视频号 **989**。</p>
+      <ul class="dense-points" data-anim><li>L1 **22,833** 为营销类最高（含大量「内容」口语命中，需与纯闲聊区分）；2023—2024 各约 **3,650**。L2 直播 **2,344**、抖音 **2,209**、小红书 **1,439**、视频号 **989**。痛点「内容难做/播放低」**348**。</li><li>B2B 视频号/抖音怎么做、播放量低。</li><li>CEO/IP 是否必须、市场决定品牌还是老板决定品牌。</li><li>内容营销是否长期主义、不好生产是否还做。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.7</div><div>47/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.8</div><div>48/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.8</div>
+      <h2 class="dense-title">4.8 工具 · SaaS · 自动化</h2>
+      <p class="dense-lead">L1 **9,646**（2.8%）；2023 命中 **2,445** 最高。与行业「SaaS/软件」标签高度重叠。痛点「工具选型/数据打通」**478**，高峰在 2021—2022。</p>
+      <ul class="dense-points" data-anim><li>L1 **9,646**（2.8%）；2023 命中 **2,445** 最高。与行业「SaaS/软件」标签高度重叠。痛点「工具选型/数据打通」**478**，高峰在 2021—2022。</li><li>SCRM、MA、CDP、营销看板；数据能否打通 MTL。</li><li>龙虾/openclaw 等自动化；影刀等效率工具。</li><li>销售易、致趣、纷享、北森等名字常作为 **语境** 出现，而非厂商评测。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.8</div><div>48/68</div></div>
+</section>
+
+<section class="slide dark slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.9</div><div>49/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.9</div>
+      <h2 class="dense-title">4.9 招聘 · 合作 · 资源</h2>
+      <p class="dense-lead">L1 **5,325**（1.6%）；L2 招聘 JD **287**；痛点「招聘/内推」**422**。与「岗位能力/职业路径」痛点 **666** 强相关。</p>
+      <ul class="dense-points" data-anim><li>L1 **5,325**（1.6%）；L2 招聘 JD **287**；痛点「招聘/内推」**422**。与「岗位能力/职业路径」痛点 **666** 强相关。</li><li>赵岩及同学发布 JD、内推、大会嘉宾。</li><li>服务商互荐、案例合作。</li><li>市场总监/CMO/增长负责人能力模型：要不要懂投放、SEO、内容。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.9</div><div>49/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.10</div><div>50/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.10</div>
+      <h2 class="dense-title">4.10 课程 · 培训 · 活动</h2>
+      <p class="dense-lead">L1 **10,981**（3.2%）；2023 **2,132** 最高；L2「赵老师」**14,955** 常与课程、班长身份共现。</p>
+      <ul class="dense-points" data-anim><li>L1 **10,981**（3.2%）；2023 **2,132** 最高；L2「赵老师」**14,955** 常与课程、班长身份共现。</li><li>班级作业、线下课、红包/活动、接龙。</li><li>赵岩短视频打卡、26 天计划、班长点评。</li><li>线下课返场：学员回群分享 **真实数据**（线索量、投放金额），引发二次讨论。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.10</div><div>50/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.11</div><div>51/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.11</div>
+      <h2 class="dense-title">4.11 行业 × 痛点交叉（归纳）</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">组合</div><div class="v">出现频率</div></div>
+<div class="rowline"><div class="k">SaaS × 线索/工具</div><div class="v">最高</div></div>
+<div class="rowline"><div class="k">制造 × 投放/SEO</div><div class="v">高</div></div>
+<div class="rowline"><div class="k">营销传媒 × 内容/品牌</div><div class="v">高（2024+）</div></div>
+<div class="rowline"><div class="k">出海 × Google/GEO</div><div class="v">上升</div></div>
+<div class="rowline"><div class="k">教育 × 课程/直播</div><div class="v">中</div></div>
+<div class="rowline"><div class="k">医疗 × 投放合规</div><div class="v">中</div></div>
+</div></div>
+  <div class="foot"><div>4.11</div><div>51/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.12</div><div>52/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.12</div>
+      <h2 class="dense-title">4.12 跨方向交叉结论</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">交叉主题</div><div class="v">群内稳定结论</div></div>
+<div class="rowline"><div class="k">短期 vs 长期</div><div class="v">SEM/大搜验证需求；SEO/内容/私域建基本盘；品专/品牌在大预算才常谈</div></div>
+<div class="rowline"><div class="k">市场 vs 销售</div><div class="v">用数据与规则减少口头甩锅；线索定义前置</div></div>
+<div class="rowline"><div class="k">ToB 特殊</div><div class="v">窄行业、非标、长决策链——照搬消费互联网打法常被质疑</div></div>
+<div class="rowline"><div class="k">2026+</div><div class="v">GEO 讨论增加，但执行层仍回到「官网/内容/可被引用」</div></div>
+</div></div>
+  <div class="foot"><div>4.12</div><div>52/68</div></div>
+</section>
+
+<section class="slide dark slide-dense ">
+  <div class="chrome"><div>第四篇 · 4.13</div><div>53/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">第四篇 · 4.13</div>
+      <h2 class="dense-title">4.13 高频场景词典（按痛点排序）</h2>
+      
+      <ul class="dense-points" data-anim><li>场景：新站不收录、改版掉排名、TDK 怎么写、外链工具数据是否可信、JS 站能不能做 SEO。</li><li>建议：先确认爬虫可见 HTML；TDK 与内链结构；第三方工具看趋势；垂直行业看长尾词量而非泛词。</li><li>场景：还用不用百度、ChatGPT 能否代替调研、品牌在 AI 答案里是否被提及、运营要不要学一堆 AI 技能。</li><li>建议：GEO 与官网权威内容、结构化表述叠加；AI 辅助草稿；关键判断仍靠业务与数据。</li></ul>
+    </div>
+    
+    </div>
+  <div class="foot"><div>4.13</div><div>53/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>5.1 体量与类型</div><div>54/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">5.1 体量与类型</div>
+      <h2 class="dense-title">5.1 体量与类型</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">类型</div><div class="v">条数</div></div>
+<div class="rowline"><div class="k">文本</div><div class="v">250,605</div></div>
 <div class="rowline"><div class="k">链接/文件</div><div class="v">53,921</div></div>
-<div class="rowline"><div class="k">A层发言者</div><div class="v">95 人 ≥500条</div></div>
-<div class="rowline"><div class="k">Top10 发言</div><div class="v">约 50%</div></div>
-<div class="rowline"><div class="k">7班消息</div><div class="v">1,675</div></div>
-</div>
+<div class="rowline"><div class="k">表情</div><div class="v">17,092</div></div>
+<div class="rowline"><div class="k">图片</div><div class="v">14,541</div></div>
+<div class="rowline"><div class="k">系统</div><div class="v">5,567</div></div>
+<div class="rowline"><div class="k">其他</div><div class="v">5,534</div></div>
+</div></div>
+  <div class="foot"><div>5.1 体量与类型</div><div>54/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>5.3 链接承载的内容类型（归纳）</div><div>55/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">5.3 链接承载的内容类型（归纳）</div>
+      <h2 class="dense-title">5.3 链接承载的内容类型（归纳）</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">类型</div><div class="v">常见来源</div></div>
+<div class="rowline"><div class="k">招聘/JD</div><div class="v">赵岩、企业方</div></div>
+<div class="rowline"><div class="k">行业文章/公众号</div><div class="v">赵岩、副轴</div></div>
+<div class="rowline"><div class="k">大会/课程/活动</div><div class="v">赵岩、班长</div></div>
+<div class="rowline"><div class="k">工具/产品页</div><div class="v">学员、乙方</div></div>
+<div class="rowline"><div class="k">直播/回放</div><div class="v">致趣等生态</div></div>
+</div></div>
+  <div class="foot"><div>5.3 链接承载的内容类</div><div>55/68</div></div>
+</section>
+
+<section class="slide light slide-dense ">
+  <div class="chrome"><div>附录 B · L1/L2 标签简表</div><div>56/68</div></div>
+  <div class="dense-body"><div class="dense-head" data-anim>
+      <div class="kicker">附录 B · L1/L2 标签简表</div>
+      <h2 class="dense-title">附：数据口径（备查）</h2>
+    </div>
+    <div class="col" style="margin-top:1vh;flex:1;min-height:0;overflow:auto" data-anim>
+<div class="rowline"><div class="k">项</div><div class="v">说明</div></div>
+<div class="rowline"><div class="k">数据源</div><div class="v">本机 wx-cli 导出，七班全量 JSONL 缓存</div></div>
+<div class="rowline"><div class="k">发言者归一</div><div class="v">赵岩*→赵岩，加玮*→加玮（Alone），始熊君*→始熊君</div></div>
+<div class="rowline"><div class="k">话题段</div><div class="v">同群、>30 分钟断档、≥2 人</div></div>
+<div class="rowline"><div class="k">营销议题命中</div><div class="v">消息级关键词 + 13,187 话题段交叉验证</div></div>
+<div class="rowline"><div class="k">详表</div><div class="v">见同目录 `02-全量标签统计.md`、`tag-scan-full.json`、`expand-stats.json`</div></div>
+<div class="rowline"><div class="k">行业/痛点扫描</div><div class="v">`expand_stats.py` 产出；15 行业 + 15 痛点正则，消息级可重叠命中</div></div>
+<div class="rowline"><div class="k">年</div><div class="v">赵岩条数</div></div>
+</div></div>
+  <div class="foot"><div>L1/L2 标签简表</div><div>56/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · 线索 · 销售 · 转化</div><div>57/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · 线索 · 销售 · 转化</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「1、新人选择 B2B 软件行业有前景嘛？ 2、我如何选择能持续加薪的互联网职业？ … 14、B2B 的业务还要做 SEO 嘛？ … 24、销售认为市场线索质量不好怎么办？ … 28、营销软件真的能带来增长嘛？」</h2>
+    <p class="dense-lead" data-anim>赵岩</p>
   </div>
-  <div class="foot"><div>组织数据表</div><div>09/52</div></div>
+  <div class="foot"><div>第六篇 · 线索 · 销售 · 转化</div><div>57/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · 投放 · SEM · 广告</div><div>58/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · 投放 · SEM · 广告</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「没那么复杂，线上官网这块，有品牌价值也有线索价值… 1. 最快增长的是 SEM，SEM 里面主要是行业词、产品词… 2. ROI 最高的是 SEO，但依赖比较长的时间… 一般建议流程：先看每天的线索增长 → 验证 SEM → 启动 SEO → 线上其他渠道的内容覆盖 → 最后才考虑品专。」</h2>
+    <p class="dense-lead" data-anim>加玮（Alone）</p>
+  </div>
+  <div class="foot"><div>第六篇 · 投放 · SEM · 广告</div><div>58/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · SEO · 网站 · 搜索</div><div>59/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · SEO · 网站 · 搜索</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「基木鱼事件… 如果网站转化漏斗里，完整性和内容丰富度起很大作用，基木鱼单页可能不如官网；很多官网把 SEM 流量全部落到首页，支撑力量不够。」</h2>
+    <p class="dense-lead" data-anim>Zhaoy07331</p>
+  </div>
+  <div class="foot"><div>第六篇 · SEO · 网站 · 搜索</div><div>59/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · GEO · AI</div><div>60/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · GEO · AI</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「你们搜索工作相关问题，还会去搜索引擎吗？如果不是百度或者 Google，会在什么地方搜索？」</h2>
+    <p class="dense-lead" data-anim>赵岩</p>
+  </div>
+  <div class="foot"><div>第六篇 · GEO · AI</div><div>60/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · 私域 · 社群</div><div>61/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · 私域 · 社群</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「营销软件最有价值的是行业 SOP，也就是可复制的最佳实践。」</h2>
+    <p class="dense-lead" data-anim>赵岩</p>
+  </div>
+  <div class="foot"><div>第六篇 · 私域 · 社群</div><div>61/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · 内容 · 品牌</div><div>62/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · 内容 · 品牌</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「营销人向后发展，认知会变得很重要，对业务的理解决定了战略方向，战略乱了，所有的计划打法都会南辕北辙。」</h2>
+    <p class="dense-lead" data-anim>赵岩</p>
+  </div>
+  <div class="foot"><div>第六篇 · 内容 · 品牌</div><div>62/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · 线索质量（销售与市场）</div><div>63/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · 线索质量（销售与市场）</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「其实有办法通过销售跟进行为来反推线索质量，而不是只听销售单方面甩锅。」</h2>
+    <p class="dense-lead" data-anim>牛磊 营销 顾问</p>
+  </div>
+  <div class="foot"><div>第六篇 · 线索质量（销售与市场）</div><div>63/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · 工具 · 组织 · 综合</div><div>64/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · 工具 · 组织 · 综合</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「营销软件最有价值的是行业 SOP，也就是可复制的最佳实践。」</h2>
+    <p class="dense-lead" data-anim>赵岩</p>
+  </div>
+  <div class="foot"><div>第六篇 · 工具 · 组织 · 综合</div><div>64/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · 2025—2026 · GEO / 出海（补充）</div><div>65/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · 2025—2026 · GEO / 出海（补充）</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「你们搜索工作相关问题，还会去搜索引擎吗？如果不是百度或者 Google，会在什么地方搜索？」</h2>
+    <p class="dense-lead" data-anim>赵岩</p>
+  </div>
+  <div class="foot"><div>第六篇 · 2025—2026 · GEO / 出海（补充）</div><div>65/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · 基木鱼 · 官网 · 长期主义（补充）</div><div>66/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · 基木鱼 · 官网 · 长期主义（补充）</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「用户也不傻，积木鱼承载内容比较少，会去找自然排名的网站… 网站该升级升级，积木鱼承载不了这么多内容，也承载不了品牌，更无法做 SEO 自然流量。」</h2>
+    <p class="dense-lead" data-anim>上海雍熙-Paul</p>
+  </div>
+  <div class="foot"><div>第六篇 · 基木鱼 · 官网 · 长期主义（补充）</div><div>66/68</div></div>
+</section>
+
+<section class="slide dark slide-dense" data-animate="quote">
+  <div class="chrome"><div>第六篇 · SEO 目标 · 私域 SOP · AI 试点（补充）</div><div>67/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:6vh 8vw">
+    <div class="kicker" data-anim>第六篇 · SEO 目标 · 私域 SOP · AI 试点（补充）</div>
+    <h2 class="dense-title" style="font-style:italic;text-align:center" data-anim>「确认适宜的渠道阶段目标：SEO 虽然是长期工作，但团队需要从这个渠道增长中获得信心和支持… 将高频关键词和低频关键词纳入同等执行周期，让有效展现同长期目标形成黏性互动。」</h2>
+    <p class="dense-lead" data-anim>赵岩</p>
+  </div>
+  <div class="foot"><div>第六篇 · SEO 目标 · 私域 SOP · AI 试点（补充）</div><div>67/68</div></div>
 </section>
 
 <section class="slide hero dark">
-  <div class="chrome"><div>Act II · 五年演变</div><div>10/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:3vh">
-    <div class="kicker" data-anim>Act II · 五年演变</div>
-    <h1 class="h-hero" style="font-size:clamp(2rem,6vw,5rem)" data-anim>第二篇</h1>
-    <p class="lead" data-anim>体量 · 议题结构 · 渠道</p>
+  <div class="chrome"><div>收尾</div><div>68/68</div></div>
+  <div class="frame center" style="justify-content:center;text-align:center;gap:2.5vh">
+    <div class="kicker" data-anim>收尾</div>
+    <h1 class="display-zh" data-anim>Thank you</h1>
+    <p class="lead" data-anim>加玮 · 2026</p>
   </div>
-  <div class="foot"><div>五年演变</div><div>10/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第二篇 · 年度体量</div><div>11/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 年度体量</div>
-    <h2 class="h-xl" data-anim>年消息量 2021 峰值 8.0 万，2025 回落至 3.6 万</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c04-year-volume.png" alt="年消息量 2021 峰值 8.0 万，2025 回落至 3.6 万">
-    </figure>
-  </div>
-  <div class="foot"><div>年度体量</div><div>11/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第二篇 · 月度</div><div>12/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 月度</div>
-    <h2 class="h-xl" data-anim>单月峰值 2021-08：17,878 条</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c05-month-top15.png" alt="单月峰值 2021-08：17,878 条">
-    </figure>
-  </div>
-  <div class="foot"><div>月度</div><div>12/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第二篇 · 季度</div><div>13/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 季度</div>
-    <h2 class="h-xl" data-anim>最热季度 2021-Q3：36,581 条</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c06-quarter-top12.png" alt="最热季度 2021-Q3：36,581 条">
-    </figure>
-  </div>
-  <div class="foot"><div>季度</div><div>13/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第二篇 · 半年度</div><div>14/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 半年度</div>
-    <h2 class="h-xl" data-anim>2021H2、2023H2 为两个半年爆发段</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c07-halfyear.png" alt="2021H2、2023H2 为两个半年爆发段">
-    </figure>
-  </div>
-  <div class="foot"><div>半年度</div><div>14/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第二篇 · 议题占比</div><div>15/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 议题占比</div>
-    <h2 class="h-xl" data-anim>2026 年 GEO 占营销议题 19.1%，结构首超线索（8.8%）</h2>
-    <p class="lead" style="margin-bottom:1.5vh" data-anim>100% 堆叠柱 · 每年十类 L1 合计</p>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c08-l1-share-year.png" alt="2026 年 GEO 占营销议题 19.1%，结构首超线索（8.8%）">
-    </figure>
-  </div>
-  <div class="foot"><div>议题占比</div><div>15/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第二篇 · 议题结构</div><div>16/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 议题结构</div>
-    <h2 class="h-xl" data-anim>议题结构五年迁移：GEO 从可忽略到近两成</h2>
-    <p class="lead" style="margin-bottom:1.5vh" data-anim>桑基：每年列高=100%，只看占比带宽</p>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c09-l1-sankey-share.png" alt="议题结构五年迁移：GEO 从可忽略到近两成">
-    </figure>
-  </div>
-  <div class="foot"><div>议题结构</div><div>16/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第二篇 · 议题绝对值</div><div>17/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 议题绝对值</div>
-    <h2 class="h-xl" data-anim>线索/SEO 命中随群总量下降，2026 GEO 逆势抬升</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c10-l1-trend-abs.png" alt="线索/SEO 命中随群总量下降，2026 GEO 逆势抬升">
-    </figure>
-  </div>
-  <div class="foot"><div>议题绝对值</div><div>17/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第二篇 · 渠道</div><div>18/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 渠道</div>
-    <h2 class="h-xl" data-anim>百度提及 5,629 条；GEO 标签 2026 年 265 条</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c21-platform-l2.png" alt="百度提及 5,629 条；GEO 标签 2026 年 265 条">
-    </figure>
-  </div>
-  <div class="foot"><div>渠道</div><div>18/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第二篇 · 2026 结构</div><div>19/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第二篇 · 2026 结构</div>
-    <h2 class="h-xl" data-anim>2026 年 GEO-AI 命中 622 条，约为线索 287 条的 2.2 倍</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c22-geo-vs-lead-2026.png" alt="2026 年 GEO-AI 命中 622 条，约为线索 287 条的 2.2 倍">
-    </figure>
-  </div>
-  <div class="foot"><div>2026 结构</div><div>19/52</div></div>
-</section>
-
-<section class="slide hero light">
-  <div class="chrome"><div>Act III · 核心数据</div><div>20/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:3vh">
-    <div class="kicker" data-anim>Act III · 核心数据</div>
-    <h1 class="h-hero" style="font-size:clamp(2rem,6vw,5rem)" data-anim>行业 · 痛点 · 议题</h1>
-    <p class="lead" data-anim>前置统计盘</p>
-  </div>
-  <div class="foot"><div>核心数据</div><div>20/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>核心数据 · 02 行业提及热度</div><div>21/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>核心数据 · 02 行业提及热度</div>
-    <h2 class="h-xl" data-anim>6,549 条消息提及 SaaS/企业服务，为行业第一</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c12-industry.png" alt="6,549 条消息提及 SaaS/企业服务，为行业第一">
-    </figure>
-  </div>
-  <div class="foot"><div>02 行业提及热度</div><div>21/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>核心数据 · 02 行业占比</div><div>22/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>核心数据 · 02 行业占比</div>
-    <h2 class="h-xl" data-anim>出海提及占比在 2025—2026 逆势升高</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c13-industry-share-year.png" alt="出海提及占比在 2025—2026 逆势升高">
-    </figure>
-  </div>
-  <div class="foot"><div>02 行业占比</div><div>22/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>核心数据 · 03 痛点场景</div><div>23/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>核心数据 · 03 痛点场景</div>
-    <h2 class="h-xl" data-anim>2,045 条命中 SEO/收录类痛点，为五年最高</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c14-pain.png" alt="2,045 条命中 SEO/收录类痛点，为五年最高">
-    </figure>
-  </div>
-  <div class="foot"><div>03 痛点场景</div><div>23/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>核心数据 · 03 痛点占比</div><div>24/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>核心数据 · 03 痛点占比</div>
-    <h2 class="h-xl" data-anim>2025 起 GEO/AI 焦虑占痛点结构第一</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c15-pain-share-year.png" alt="2025 起 GEO/AI 焦虑占痛点结构第一">
-    </figure>
-  </div>
-  <div class="foot"><div>03 痛点占比</div><div>24/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>核心数据 · 03 痛点趋势</div><div>25/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>核心数据 · 03 痛点趋势</div>
-    <h2 class="h-xl" data-anim>销售互怼痛点 2022—2023 最集中</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c16-pain-trend.png" alt="销售互怼痛点 2022—2023 最集中">
-    </figure>
-  </div>
-  <div class="foot"><div>03 痛点趋势</div><div>25/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>核心数据 · 04 L1 议题</div><div>26/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>核心数据 · 04 L1 议题</div>
-    <h2 class="h-xl" data-anim>内容品牌 L1 命中 22,833；线索 14,529 为获客主轴</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c11-l1-all.png" alt="内容品牌 L1 命中 22,833；线索 14,529 为获客主轴">
-    </figure>
-  </div>
-  <div class="foot"><div>04 L1 议题</div><div>26/52</div></div>
-</section>
-
-<section class="slide hero dark">
-  <div class="chrome"><div>Act IV · 参与者</div><div>27/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:3vh">
-    <div class="kicker" data-anim>Act IV · 参与者</div>
-    <h1 class="h-hero" style="font-size:clamp(2rem,6vw,5rem)" data-anim>第三篇</h1>
-    <p class="lead" data-anim>赵岩主轴 · Top30 过半</p>
-  </div>
-  <div class="foot"><div>参与者</div><div>27/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第三篇 · 参与者</div><div>28/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第三篇 · 参与者</div>
-    <h2 class="h-xl" data-anim>赵岩 52,960 条（15.5%）；Zhaoy07331、始熊君分列二三</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c17-speakers-top10.png" alt="赵岩 52,960 条（15.5%）；Zhaoy07331、始熊君分列二三">
-    </figure>
-  </div>
-  <div class="foot"><div>参与者</div><div>28/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第三篇 · 赵岩</div><div>29/52</div></div>
-  <div class="frame" style="padding-top:2.5vh">
-    <div class="kicker" data-anim>第三篇 · 赵岩</div>
-    <h2 class="h-xl" data-anim>赵岩发言 2023 年峰值 12,849 条/年</h2>
-    <figure class="frame-img r-16x9 fit-contain" style="max-height:58vh" data-anim>
-      <img src="images/c20-zhao-by-year.png" alt="赵岩发言 2023 年峰值 12,849 条/年">
-    </figure>
-  </div>
-  <div class="foot"><div>赵岩</div><div>29/52</div></div>
-</section>
-
-<section class="slide hero light">
-  <div class="chrome"><div>Act V · 讨论方向</div><div>30/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:3vh">
-    <div class="kicker" data-anim>Act V · 讨论方向</div>
-    <h1 class="h-hero" style="font-size:clamp(2rem,6vw,5rem)" data-anim>第四篇</h1>
-    <p class="lead" data-anim>场景 + 建议摘要（无原话堆砌）</p>
-  </div>
-  <div class="foot"><div>讨论方向</div><div>30/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.0 议题矩阵</div><div>31/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.0 议题矩阵</div>
-    <h2 class="h-xl" data-anim>线索 14,529 · 内容 22,833 · SEO 13,492 为 L1 前三</h2>
-    <p class="lead" data-anim>话题段 13,187（>30min·≥2人）与消息 L1 口径不同</p>
-  </div>
-  <div class="foot"><div>4.0 议题矩阵</div><div>31/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.0 议题矩阵</div><div>32/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.0 议题矩阵</div>
-    <h2 class="h-xl" data-anim>L1 方向 × 高峰年 × 关联痛点（表）</h2>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="k">线索·销售</div><div class="v">14,529 · 峰2022-23</div></div>
-<div class="rowline"><div class="k">内容·品牌</div><div class="v">22,833 · 峰2023-24</div></div>
-<div class="rowline"><div class="k">SEO·搜索</div><div class="v">13,492 · 峰2021-22</div></div>
-<div class="rowline"><div class="k">投放·广告</div><div class="v">9,766 · 峰2021-23</div></div>
-<div class="rowline"><div class="k">GEO·AI</div><div class="v">2,569 · 峰2026</div></div>
-<div class="rowline"><div class="k">私域·企微</div><div class="v">4,189 · 峰2021</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.0 议题矩阵</div><div>32/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.1 线索</div><div>33/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.1 线索</div>
-    <h2 class="h-xl" data-anim>超过 14,529 条消息讨论线索与销售协同</h2>
-    <p class="lead" data-anim>2022—2023 各约 3,550；5班线索 L1 最高</p>
-  </div>
-  <div class="foot"><div>4.1 线索</div><div>33/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第四篇 · 4.1 线索</div><div>34/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.1 线索</div>
-    <h2 class="h-xl" data-anim>群内稳定建议：先定义线索，再用销售行为反推质量</h2>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="v" style="flex:1">对齐意愿强/质量高维度，再谈工具</div></div>
-<div class="rowline"><div class="v" style="flex:1">销售嘴上说差却不放公海→问题或在转化</div></div>
-<div class="rowline"><div class="v" style="flex:1">直播/会展慢变量，SEM 短变量，KPI 分层</div></div>
-<div class="rowline"><div class="v" style="flex:1">非标制造慎信息流，重 SEO+线下</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.1 线索</div><div>34/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.2 投放</div><div>35/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.2 投放</div>
-    <h2 class="h-xl" data-anim>9,766 条讨论投放；百度 L2 命中 5,629</h2>
-    <p class="lead" data-anim>痛点「投放成本」422 · oCPC 高价频发</p>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="v" style="flex:1">加玮路径：日线索→SEM→SEO→内容→品专（可跳过）</div></div>
-<div class="rowline"><div class="v" style="flex:1">落地页：官网完整度 vs 基木鱼单页</div></div>
-<div class="rowline"><div class="v" style="flex:1">缩词包、长尾、检查词路；窄人群慎信息流</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.2 投放</div><div>35/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第四篇 · 4.3 SEO</div><div>36/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.3 SEO</div>
-    <h2 class="h-xl" data-anim>13,492 条 SEO 议题；痛点 SEO 收录 2,045 为五年第一</h2>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="v" style="flex:1">先确认静态 HTML 可见，再谈 TDK/内链</div></div>
-<div class="rowline"><div class="v" style="flex:1">长尾看词量+行业场景；工具只看趋势</div></div>
-<div class="rowline"><div class="v" style="flex:1">官网=SEO载体=SEM落地页=GEO权威源</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.3 SEO</div><div>36/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.4 GEO</div><div>37/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.4 GEO</div>
-    <h2 class="h-xl" data-anim>2026 年 GEO L1 622 条，已超过同年线索 287 条</h2>
-    <p class="lead" data-anim>7班 GEO 浓度约 8%；痛点 GEO 焦虑 2025+登顶</p>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="v" style="flex:1">GEO 绑定可被引用内容+官网结构，非单独渠道</div></div>
-<div class="rowline"><div class="v" style="flex:1">AI 辅助草稿；判断仍靠业务与数据</div></div>
-<div class="rowline"><div class="v" style="flex:1">赵岩 2023 已埋「还会用搜索引擎吗」种子</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.4 GEO</div><div>37/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第四篇 · 4.5 出海</div><div>38/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.5 出海</div>
-    <h2 class="h-xl" data-anim>2,981 条出海议题；2024 单年命中 578 为峰</h2>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="v" style="flex:1">与 Google L2（1,512）高度重叠</div></div>
-<div class="rowline"><div class="v" style="flex:1">官网本地化=价值主张+合规</div></div>
-<div class="rowline"><div class="v" style="flex:1">英语与 CRM 经验常为硬门槛</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.5 出海</div><div>38/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.6 私域</div><div>39/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.6 私域</div>
-    <h2 class="h-xl" data-anim>私域 L1 峰在 2021（1,146），2026 仅 23 条</h2>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="v" style="flex:1">大群按行业×岗位分层；企微低频高价值</div></div>
-<div class="rowline"><div class="v" style="flex:1">私域不能替代大搜/SEO 验证</div></div>
-<div class="rowline"><div class="v" style="flex:1">行业 SOP 可复制 > 功能堆叠</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.6 私域</div><div>39/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.7 内容</div><div>40/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.7 内容</div>
-    <h2 class="h-xl" data-anim>内容 L1 22,833 最高（含口语宽命中）</h2>
-    <p class="lead" data-anim>直播 L2 2,344 · 抖音 2,209 · 小红书 2024 抬头</p>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="v" style="flex:1">B2B 视频无成熟爆款公式</div></div>
-<div class="rowline"><div class="v" style="flex:1">品牌/获客/转化三层 KPI 勿混</div></div>
-<div class="rowline"><div class="v" style="flex:1">员工风貌有时优于 CEO IP</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.7 内容</div><div>40/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第四篇 · 4.8 工具</div><div>41/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.8 工具</div>
-    <h2 class="h-xl" data-anim>9,646 条工具议题；2023 命中 2,445 为峰</h2>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="v" style="flex:1">先流程后系统；字段进 CRM 再谈 MA</div></div>
-<div class="rowline"><div class="v" style="flex:1">致趣/销售易等多为语境非评测</div></div>
-<div class="rowline"><div class="v" style="flex:1">2026 Agent 与 GEO 同属人效焦虑</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.8 工具</div><div>41/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.9 招聘</div><div>42/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.9 招聘</div>
-    <h2 class="h-xl" data-anim>5,325 条招聘/合作；群是信任背书下的对接场</h2>
-  </div>
-  <div class="foot"><div>4.9 招聘</div><div>42/52</div></div>
-</section>
-
-<section class="slide light">
-  <div class="chrome"><div>第四篇 · 4.10 课程</div><div>43/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.10 课程</div>
-    <h2 class="h-xl" data-anim>10,981 条课程/活动；2023 与多班扩容同步</h2>
-    <p class="lead" data-anim>活动促活，方法论仍在线索/SEO 段</p>
-  </div>
-  <div class="foot"><div>4.10 课程</div><div>43/52</div></div>
-</section>
-
-<section class="slide dark">
-  <div class="chrome"><div>第四篇 · 4.11—4.12</div><div>44/52</div></div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>第四篇 · 4.11—4.12</div>
-    <h2 class="h-xl" data-anim>短期 SEM 验证 · 长期 SEO/内容/私域 · 2026+ GEO 回到官网</h2>
-<div class="col" style="margin-top:2vh;font-size:max(14px,1.05vw)" data-anim>
-<div class="rowline"><div class="k">SaaS×线索</div><div class="v">先定义线索与字段</div></div>
-<div class="rowline"><div class="k">制造×投放</div><div class="v">慎信息流，重SEO+线下</div></div>
-<div class="rowline"><div class="k">出海×GEO</div><div class="v">本地化+可引用内容</div></div>
-<div class="rowline"><div class="k">市场vs销售</div><div class="v">行为数据减甩锅</div></div>
-</div>
-  </div>
-  <div class="foot"><div>4.11—4.12</div><div>44/52</div></div>
-</section>
-
-<section class="slide hero dark">
-  <div class="chrome"><div>Act VI · 原话</div><div>45/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:3vh">
-    <div class="kicker" data-anim>Act VI · 原话</div>
-    <h1 class="h-hero" style="font-size:clamp(2rem,6vw,5rem)" data-anim>第六篇</h1>
-    <p class="lead" data-anim>完整引文支撑可信度</p>
-  </div>
-  <div class="foot"><div>原话</div><div>45/52</div></div>
-</section>
-
-<section class="slide dark" data-animate="quote">
-  <div class="chrome"><div>第六篇 · 投放</div><div>46/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:8vh 6vw">
-    <div class="kicker" data-anim>第六篇 · 投放</div>
-    <h2 class="h-xl" style="font-size:clamp(1.4rem,3.2vw,2.8rem);font-style:italic" data-anim>「先看日线索增长 → 验证 SEM → 再 SEO」</h2>
-    <p class="lead" data-anim>加玮 · 2班 · 2023-12-16</p>
-  </div>
-  <div class="foot"><div>投放</div><div>46/52</div></div>
-</section>
-
-<section class="slide dark" data-animate="quote">
-  <div class="chrome"><div>第六篇 · 线索</div><div>47/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:8vh 6vw">
-    <div class="kicker" data-anim>第六篇 · 线索</div>
-    <h2 class="h-xl" style="font-size:clamp(1.4rem,3.2vw,2.8rem);font-style:italic" data-anim>「销售跟进行为可反推线索质量」</h2>
-    <p class="lead" data-anim>牛磊 · 5班 · 2023-06</p>
-  </div>
-  <div class="foot"><div>线索</div><div>47/52</div></div>
-</section>
-
-<section class="slide light" data-animate="quote">
-  <div class="chrome"><div>第六篇 · 工具</div><div>48/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:8vh 6vw">
-    <div class="kicker" data-anim>第六篇 · 工具</div>
-    <h2 class="h-xl" style="font-size:clamp(1.4rem,3.2vw,2.8rem);font-style:italic" data-anim>「营销软件价值在行业 SOP」</h2>
-    <p class="lead" data-anim>赵岩 · 1班 · 2023-05</p>
-  </div>
-  <div class="foot"><div>工具</div><div>48/52</div></div>
-</section>
-
-<section class="slide light" data-animate="quote">
-  <div class="chrome"><div>第六篇 · SEO</div><div>49/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:8vh 6vw">
-    <div class="kicker" data-anim>第六篇 · SEO</div>
-    <h2 class="h-xl" style="font-size:clamp(1.4rem,3.2vw,2.8rem);font-style:italic" data-anim>「基木鱼承载不了品牌与 SEO 自然流量」</h2>
-    <p class="lead" data-anim>雍熙-Paul · 2班 · 2021-05</p>
-  </div>
-  <div class="foot"><div>SEO</div><div>49/52</div></div>
-</section>
-
-<section class="slide light" data-animate="quote">
-  <div class="chrome"><div>第六篇 · 内容</div><div>50/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:8vh 6vw">
-    <div class="kicker" data-anim>第六篇 · 内容</div>
-    <h2 class="h-xl" style="font-size:clamp(1.4rem,3.2vw,2.8rem);font-style:italic" data-anim>「直播要分层：品牌层 / 获客层 / 转化层」</h2>
-    <p class="lead" data-anim>姚兆兆 · 1班 · 2021-08</p>
-  </div>
-  <div class="foot"><div>内容</div><div>50/52</div></div>
-</section>
-
-<section class="slide dark" data-animate="quote">
-  <div class="chrome"><div>第六篇 · GEO</div><div>51/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:2vh;padding:8vh 6vw">
-    <div class="kicker" data-anim>第六篇 · GEO</div>
-    <h2 class="h-xl" style="font-size:clamp(1.4rem,3.2vw,2.8rem);font-style:italic" data-anim>「工作问题还会去搜索引擎吗？」</h2>
-    <p class="lead" data-anim>赵岩 · 2班 · 2023-06（2026 大量接龙）</p>
-  </div>
-  <div class="foot"><div>GEO</div><div>51/52</div></div>
-</section>
-
-<section class="slide hero dark">
-  <div class="chrome"><div>附录</div><div>52/52</div></div>
-  <div class="frame center" style="justify-content:center;text-align:center;gap:3vh">
-    <div class="kicker" data-anim>附录</div>
-    <h1 class="h-hero" style="font-size:clamp(2rem,6vw,5rem)" data-anim>详稿 + 22 图 + assets/data 原始 JSON</h1>
-    <p class="lead" data-anim>GitHub: zhaoyan-digital-marketing-5y-whitepaper</p>
-  </div>
-  <div class="foot"><div>附录</div><div>52/52</div></div>
+  <div class="foot"><div>收尾</div><div>68/68</div></div>
 </section>
 
 </div>

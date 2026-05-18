@@ -2,7 +2,7 @@
 
 **编制：** 加玮（Alone）  
 **数据周期：** 2021-04-18 — 2026-05-15  
-**图表规范：** [`03-图表规范与清单.md`](03-图表规范与清单.md) · **图片目录：** `assets/charts/`
+**图表规范：** [`03-图表规范与清单.md`](03-图表规范与清单.md) · **图片目录：** `assets/charts/` · **GitHub：** [zhaoyan-digital-marketing-5y-whitepaper](https://github.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper)
 
 **范围：** 数字营销实战 1—7 班（本机可读取聊天记录；地图联创群无本地记录）
 
@@ -30,7 +30,7 @@
 
 ### 核心数据 · 02 行业提及热度
 
-![行业提及 Top8](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c12-industry.png)
+![行业提及 Top8](assets/charts/c12-industry.png)
 
 | 行业/赛道 | 命中条数 | 占全群 |
 |-----------|----------|--------|
@@ -48,7 +48,7 @@
 
 ### 核心数据 · 02 行业占比 × 年
 
-![行业占比 100% 堆叠](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c13-industry-share-year.png)
+![行业占比 100% 堆叠](assets/charts/c13-industry-share-year.png)
 
 ---
 
@@ -56,7 +56,7 @@
 
 ### 核心数据 · 03 痛点场景热度
 
-![痛点 Top6](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c14-pain.png)
+![痛点 Top6](assets/charts/c14-pain.png)
 
 | 痛点场景 | 命中条数 |
 |----------|----------|
@@ -71,7 +71,7 @@
 
 ### 核心数据 · 03 痛点占比 × 年
 
-![痛点占比 100%](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c15-pain-share-year.png)
+![痛点占比 100%](assets/charts/c15-pain-share-year.png)
 
 ---
 
@@ -79,7 +79,7 @@
 
 ### 核心数据 · 04 L1 议题
 
-![L1 议题分布](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c11-l1-all.png)
+![L1 议题分布](assets/charts/c11-l1-all.png)
 
 ---
 
@@ -87,11 +87,9 @@
 
 ### 核心数据 · 04 议题占比 × 年
 
-![L1 占比 100%](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c08-l1-share-year.png)
+![L1 占比 100%](assets/charts/c08-l1-share-year.png)
 
-![议题结构桑基图 每年列=100%](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c09-l1-sankey-share.png)
-
-*读桑基图：列高一致，只看带宽占比变化，不看绝对条数递减。*
+![议题结构桑基图 每年列=100%](assets/charts/c09-l1-sankey-share.png)
 
 ---
 
@@ -101,7 +99,7 @@
 
 ### 第一篇 · 组织全景 · 消息类型
 
-![消息类型](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c01-msg-type.png)
+![消息类型](assets/charts/c01-msg-type.png)
 
 ---
 
@@ -109,9 +107,9 @@
 
 ### 第一篇 · 组织全景 · 班级与沉默
 
-![各班级消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c02-groups.png)
+![各班级消息量](assets/charts/c02-groups.png)
 
-![各班沉默率](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c19-silence-by-class.png)
+![各班沉默率](assets/charts/c19-silence-by-class.png)
 
 ---
 
@@ -119,7 +117,7 @@
 
 ### 第一篇 · 组织全景 · 参与结构
 
-![发言者层级](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c03-speaker-tier.png)
+![发言者层级](assets/charts/c03-speaker-tier.png)
 
 ---
 
@@ -127,7 +125,7 @@
 
 ### 第一篇 · 组织全景 · 活跃节律
 
-![24小时分布](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c18-hours.png)
+![24小时分布](assets/charts/c18-hours.png)
 
 ## 1.1 规模与结构
 
@@ -186,7 +184,7 @@
 
 ### 第二篇 · 五年演变 · 年度
 
-![年度消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c04-year-volume.png)
+![年度消息量](assets/charts/c04-year-volume.png)
 
 ---
 
@@ -194,7 +192,7 @@
 
 ### 第二篇 · 五年演变 · 月度
 
-![月度 Top15](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c05-month-top15.png)
+![月度 Top15](assets/charts/c05-month-top15.png)
 
 ---
 
@@ -202,7 +200,7 @@
 
 ### 第二篇 · 五年演变 · 季度
 
-![季度 Top12](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c06-quarter-top12.png)
+![季度 Top12](assets/charts/c06-quarter-top12.png)
 
 ---
 
@@ -210,7 +208,7 @@
 
 ### 第二篇 · 五年演变 · 半年度
 
-![半年度消息量](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c07-halfyear.png)
+![半年度消息量](assets/charts/c07-halfyear.png)
 
 ---
 
@@ -218,11 +216,9 @@
 
 ### 第二篇 · 五年演变 · 议题占比
 
-![L1 占比 100%](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c08-l1-share-year.png)
+![L1 占比 100%](assets/charts/c08-l1-share-year.png)
 
-![议题结构桑基图（每年列=100%）](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c09-l1-sankey-share.png)
-
-*读桑基图：列高一致，只看带宽占比变化，不看绝对条数递减。*
+![议题结构桑基图（每年列=100%）](assets/charts/c09-l1-sankey-share.png)
 
 ---
 
@@ -230,7 +226,7 @@
 
 ### 第二篇 · 五年演变 · 议题绝对值
 
-![L1 绝对趋势](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c10-l1-trend-abs.png)
+![L1 绝对趋势](assets/charts/c10-l1-trend-abs.png)
 
 ---
 
@@ -238,7 +234,7 @@
 
 ### 第二篇 · 五年演变 · 渠道
 
-![平台词命中](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c21-platform-l2.png)
+![平台词命中](assets/charts/c21-platform-l2.png)
 
 ---
 
@@ -246,7 +242,7 @@
 
 ### 第二篇 · 五年演变 · 2026 结构
 
-![GEO vs 线索 2026](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c22-geo-vs-lead-2026.png)
+![GEO vs 线索 2026](assets/charts/c22-geo-vs-lead-2026.png)
 
 ## 2.1 消息量
 
@@ -350,9 +346,9 @@
 
 ## 2.5 痛点迁移（按年 Top3）
 
-![痛点绝对趋势](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c16-pain-trend.png)
+![痛点绝对趋势](assets/charts/c16-pain-trend.png)
 
-![痛点绝对趋势](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c16-pain-trend.png)
+![痛点绝对趋势](assets/charts/c16-pain-trend.png)
 
 | 年 | 痛点 Top3 | 解读 |
 |----|-----------|------|
@@ -395,7 +391,7 @@
 
 ### 第三篇 · 参与者 · Top10
 
-![发言人 Top10](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c17-speakers-top10.png)
+![发言人 Top10](assets/charts/c17-speakers-top10.png)
 
 ---
 
@@ -403,7 +399,7 @@
 
 ### 第三篇 · 参与者 · 赵岩
 
-![赵岩 × 年](https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts/c20-zhao-by-year.png)
+![赵岩 × 年](assets/charts/c20-zhao-by-year.png)
 
 ## 3.1 发言集中度
 

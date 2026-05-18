@@ -29,7 +29,7 @@ BLOCKS: list[dict] = [
 
 ### 核心数据 · 02 行业提及热度
 
-![行业提及 Top8]({base}/assets/charts/c12-industry.png)
+![行业提及 Top8](assets/charts/c12-industry.png)
 
 | 行业/赛道 | 命中条数 | 占全群 |
 |-----------|----------|--------|
@@ -47,7 +47,7 @@ BLOCKS: list[dict] = [
 
 ### 核心数据 · 02 行业占比 × 年
 
-![行业占比 100% 堆叠]({base}/assets/charts/c13-industry-share-year.png)
+![行业占比 100% 堆叠](assets/charts/c13-industry-share-year.png)
 
 ---
 
@@ -55,7 +55,7 @@ BLOCKS: list[dict] = [
 
 ### 核心数据 · 03 痛点场景热度
 
-![痛点 Top6]({base}/assets/charts/c14-pain.png)
+![痛点 Top6](assets/charts/c14-pain.png)
 
 | 痛点场景 | 命中条数 |
 |----------|----------|
@@ -70,7 +70,7 @@ BLOCKS: list[dict] = [
 
 ### 核心数据 · 03 痛点占比 × 年
 
-![痛点占比 100%]({base}/assets/charts/c15-pain-share-year.png)
+![痛点占比 100%](assets/charts/c15-pain-share-year.png)
 
 ---
 
@@ -78,7 +78,7 @@ BLOCKS: list[dict] = [
 
 ### 核心数据 · 04 L1 议题
 
-![L1 议题分布]({base}/assets/charts/c11-l1-all.png)
+![L1 议题分布](assets/charts/c11-l1-all.png)
 
 ---
 
@@ -86,11 +86,9 @@ BLOCKS: list[dict] = [
 
 ### 核心数据 · 04 议题占比 × 年
 
-![L1 占比 100%]({base}/assets/charts/c08-l1-share-year.png)
+![L1 占比 100%](assets/charts/c08-l1-share-year.png)
 
-![议题结构桑基图 每年列=100%]({base}/assets/charts/c09-l1-sankey-share.png)
-
-*读桑基图：列高一致，只看带宽占比变化，不看绝对条数递减。*
+![议题结构桑基图](assets/charts/c09-l1-sankey-share.png)
 
 """,
     },
@@ -102,7 +100,7 @@ BLOCKS: list[dict] = [
 
 ### 第一篇 · 组织全景 · 消息类型
 
-![消息类型]({base}/assets/charts/c01-msg-type.png)
+![消息类型](assets/charts/c01-msg-type.png)
 
 ---
 
@@ -110,9 +108,9 @@ BLOCKS: list[dict] = [
 
 ### 第一篇 · 组织全景 · 班级与沉默
 
-![各班级消息量]({base}/assets/charts/c02-groups.png)
+![各班级消息量](assets/charts/c02-groups.png)
 
-![各班沉默率]({base}/assets/charts/c19-silence-by-class.png)
+![各班沉默率](assets/charts/c19-silence-by-class.png)
 
 ---
 
@@ -120,7 +118,7 @@ BLOCKS: list[dict] = [
 
 ### 第一篇 · 组织全景 · 参与结构
 
-![发言者层级]({base}/assets/charts/c03-speaker-tier.png)
+![发言者层级](assets/charts/c03-speaker-tier.png)
 
 ---
 
@@ -128,7 +126,7 @@ BLOCKS: list[dict] = [
 
 ### 第一篇 · 组织全景 · 活跃节律
 
-![24小时分布]({base}/assets/charts/c18-hours.png)
+![24小时分布](assets/charts/c18-hours.png)
 
 """,
     },
@@ -140,7 +138,7 @@ BLOCKS: list[dict] = [
 
 ### 第二篇 · 五年演变 · 年度
 
-![年度消息量]({base}/assets/charts/c04-year-volume.png)
+![年度消息量](assets/charts/c04-year-volume.png)
 
 ---
 
@@ -148,7 +146,7 @@ BLOCKS: list[dict] = [
 
 ### 第二篇 · 五年演变 · 月度
 
-![月度 Top15]({base}/assets/charts/c05-month-top15.png)
+![月度 Top15](assets/charts/c05-month-top15.png)
 
 ---
 
@@ -156,7 +154,7 @@ BLOCKS: list[dict] = [
 
 ### 第二篇 · 五年演变 · 季度
 
-![季度 Top12]({base}/assets/charts/c06-quarter-top12.png)
+![季度 Top12](assets/charts/c06-quarter-top12.png)
 
 ---
 
@@ -164,7 +162,7 @@ BLOCKS: list[dict] = [
 
 ### 第二篇 · 五年演变 · 半年度
 
-![半年度消息量]({base}/assets/charts/c07-halfyear.png)
+![半年度消息量](assets/charts/c07-halfyear.png)
 
 ---
 
@@ -172,7 +170,7 @@ BLOCKS: list[dict] = [
 
 ### 第二篇 · 五年演变 · 议题绝对值
 
-![L1 绝对趋势]({base}/assets/charts/c10-l1-trend-abs.png)
+![L1 绝对趋势](assets/charts/c10-l1-trend-abs.png)
 
 ---
 
@@ -180,7 +178,7 @@ BLOCKS: list[dict] = [
 
 ### 第二篇 · 五年演变 · 渠道
 
-![平台词命中]({base}/assets/charts/c21-platform-l2.png)
+![平台词命中](assets/charts/c21-platform-l2.png)
 
 ---
 
@@ -188,7 +186,7 @@ BLOCKS: list[dict] = [
 
 ### 第二篇 · 五年演变 · 2026 结构
 
-![GEO vs 线索 2026]({base}/assets/charts/c22-geo-vs-lead-2026.png)
+![GEO vs 线索 2026](assets/charts/c22-geo-vs-lead-2026.png)
 
 """,
     },
@@ -200,7 +198,7 @@ BLOCKS: list[dict] = [
 
 ### 第三篇 · 参与者 · Top10
 
-![发言人 Top10]({base}/assets/charts/c17-speakers-top10.png)
+![发言人 Top10](assets/charts/c17-speakers-top10.png)
 
 ---
 
@@ -208,7 +206,7 @@ BLOCKS: list[dict] = [
 
 ### 第三篇 · 参与者 · 赵岩
 
-![赵岩 × 年]({base}/assets/charts/c20-zhao-by-year.png)
+![赵岩 × 年](assets/charts/c20-zhao-by-year.png)
 
 """,
     },
@@ -216,7 +214,7 @@ BLOCKS: list[dict] = [
         "anchor": "## 2.5 痛点迁移",
         "insert_after": True,
         "content": """
-![痛点绝对趋势]({base}/assets/charts/c16-pain-trend.png)
+![痛点绝对趋势](assets/charts/c16-pain-trend.png)
 
 """,
     },

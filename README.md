@@ -14,10 +14,11 @@
 
 ## 本地预览 PPT
 
-```bash
-cd ppt && python3 -m http.server 8765
-# 浏览器打开 http://localhost:8765/
-```
+直接用浏览器打开（无需本地服务器）：
+
+`file:///…/whitepaper-zhaoyan-5y/ppt/index.html`
+
+或在 Finder 中双击 `ppt/index.html`。
 
 ## 制图
 
