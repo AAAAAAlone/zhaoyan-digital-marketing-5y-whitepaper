@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.jsonl
+messages-all-groups.jsonl
+tag-scan-full.json
+ppt/slides_content.html
+ppt/chart-data.js
+ppt/charts.js
+ppt/gen_slides.py
+ppt/build_ppt.py
