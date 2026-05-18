@@ -8,11 +8,11 @@
     
 </head>
 <body >
-    <div id="9caed1b86b6b40f69a4e8eb5ef7d31c5" class="chart-container" style="width:1920px; height:1080px; "></div>
+    <div id="99fd41d4ea9d460cac1f3540966a046d" class="chart-container" style="width:1920px; height:1080px; "></div>
     <script>
-        var chart_9caed1b86b6b40f69a4e8eb5ef7d31c5 = echarts.init(
-            document.getElementById('9caed1b86b6b40f69a4e8eb5ef7d31c5'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_9caed1b86b6b40f69a4e8eb5ef7d31c5 = {
+        var chart_99fd41d4ea9d460cac1f3540966a046d = echarts.init(
+            document.getElementById('99fd41d4ea9d460cac1f3540966a046d'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_99fd41d4ea9d460cac1f3540966a046d = {
     "backgroundColor": "#f1f3f5",
     "animation": true,
     "animationThreshold": 2000,
@@ -48,7 +48,7 @@
             "stackStrategy": "samesign",
             "cursor": "pointer",
             "barMinHeight": 0,
-            "barCategoryGap": "20%",
+            "barCategoryGap": "28%",
             "barGap": "30%",
             "large": false,
             "largeThreshold": 400,
@@ -58,9 +58,7 @@
             "zlevel": 0,
             "z": 2,
             "label": {
-                "show": true,
-                "position": "top",
-                "color": "#0a1f3d",
+                "show": false,
                 "margin": 8,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
@@ -73,7 +71,7 @@
                 ""
             ],
             "selected": {},
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -121,16 +119,27 @@
     },
     "xAxis": [
         {
+            "type": "category",
             "show": true,
             "scale": false,
             "nameLocation": "end",
             "nameGap": 15,
             "nameTruncate": {},
             "nameMoveOverlap": true,
+            "axisLine": {
+                "show": true,
+                "onZero": true,
+                "onZeroAxisIndex": 0,
+                "lineStyle": {
+                    "show": false,
+                    "color": "#5a6d85"
+                }
+            },
             "axisLabel": {
                 "show": true,
                 "color": "#0a1f3d",
                 "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -143,8 +152,7 @@
             "splitLine": {
                 "show": true,
                 "lineStyle": {
-                    "show": false,
-                    "color": "rgba(10,31,61,.12)"
+                    "show": false
                 }
             },
             "animation": true,
@@ -173,6 +181,7 @@
     ],
     "yAxis": [
         {
+            "type": "value",
             "show": true,
             "scale": false,
             "nameLocation": "end",
@@ -183,6 +192,7 @@
                 "show": true,
                 "color": "#0a1f3d",
                 "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -218,6 +228,8 @@
             "text": "\u5b63\u5ea6 Top12",
             "target": "blank",
             "subtarget": "blank",
+            "left": "center",
+            "top": "1.5%",
             "padding": 5,
             "itemGap": 10,
             "textAlign": "auto",
@@ -225,13 +237,14 @@
             "triggerEvent": false,
             "textStyle": {
                 "color": "#0a1f3d",
-                "fontSize": 20,
+                "fontWeight": "bold",
+                "fontSize": 22,
                 "richInheritPlainLabel": true
             }
         }
     ]
 };
-        chart_9caed1b86b6b40f69a4e8eb5ef7d31c5.setOption(option_9caed1b86b6b40f69a4e8eb5ef7d31c5);
+        chart_99fd41d4ea9d460cac1f3540966a046d.setOption(option_99fd41d4ea9d460cac1f3540966a046d);
     </script>
 </body>
 </html>

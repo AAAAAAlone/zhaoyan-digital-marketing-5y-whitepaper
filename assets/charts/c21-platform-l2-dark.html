@@ -8,11 +8,11 @@
     
 </head>
 <body >
-    <div id="b75ba7bceeb64292a3dc9535f5957e37" class="chart-container" style="width:1920px; height:1080px; "></div>
+    <div id="31a9fc9b984d46c7bceeff32fc474b23" class="chart-container" style="width:1920px; height:1080px; "></div>
     <script>
-        var chart_b75ba7bceeb64292a3dc9535f5957e37 = echarts.init(
-            document.getElementById('b75ba7bceeb64292a3dc9535f5957e37'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_b75ba7bceeb64292a3dc9535f5957e37 = {
+        var chart_31a9fc9b984d46c7bceeff32fc474b23 = echarts.init(
+            document.getElementById('31a9fc9b984d46c7bceeff32fc474b23'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_31a9fc9b984d46c7bceeff32fc474b23 = {
     "backgroundColor": "#0a1f3d",
     "animation": true,
     "animationThreshold": 2000,
@@ -55,9 +55,7 @@
             "zlevel": 0,
             "z": 2,
             "label": {
-                "show": true,
-                "position": "top",
-                "color": "#e8ecf2",
+                "show": false,
                 "margin": 8,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
@@ -70,7 +68,7 @@
                 ""
             ],
             "selected": {},
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -118,6 +116,7 @@
     },
     "xAxis": [
         {
+            "type": "value",
             "show": true,
             "scale": false,
             "nameLocation": "end",
@@ -128,55 +127,7 @@
                 "show": true,
                 "color": "#e8ecf2",
                 "margin": 8,
-                "richInheritPlainLabel": true,
-                "valueAnimation": false
-            },
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "silent": false,
-            "triggerEvent": false,
-            "splitLine": {
-                "show": true,
-                "lineStyle": {
-                    "show": false,
-                    "color": "rgba(232,236,242,.15)"
-                }
-            },
-            "animation": true,
-            "animationThreshold": 2000,
-            "animationDuration": 1000,
-            "animationEasing": "cubicOut",
-            "animationDelay": 0,
-            "animationDurationUpdate": 300,
-            "animationEasingUpdate": "cubicOut",
-            "animationDelayUpdate": 0,
-            "data": [
-                "\u767e\u5ea6",
-                "\u5fae\u4fe1",
-                "\u5b98\u7f51",
-                "\u6296\u97f3",
-                "\u76f4\u64ad",
-                "Google",
-                "\u5c0f\u7ea2\u4e66",
-                "GEO",
-                "ChatGPT"
-            ]
-        }
-    ],
-    "yAxis": [
-        {
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "nameTruncate": {},
-            "nameMoveOverlap": true,
-            "axisLabel": {
-                "show": true,
-                "color": "#e8ecf2",
-                "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -203,6 +154,65 @@
             "animationDelayUpdate": 0
         }
     ],
+    "yAxis": [
+        {
+            "type": "category",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "nameTruncate": {},
+            "nameMoveOverlap": true,
+            "axisLine": {
+                "show": true,
+                "onZero": true,
+                "onZeroAxisIndex": 0,
+                "lineStyle": {
+                    "show": false,
+                    "color": "#8fa3bf"
+                }
+            },
+            "axisLabel": {
+                "show": true,
+                "color": "#e8ecf2",
+                "margin": 8,
+                "fontSize": 12,
+                "richInheritPlainLabel": true,
+                "valueAnimation": false
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "silent": false,
+            "triggerEvent": false,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": false
+                }
+            },
+            "animation": true,
+            "animationThreshold": 2000,
+            "animationDuration": 1000,
+            "animationEasing": "cubicOut",
+            "animationDelay": 0,
+            "animationDurationUpdate": 300,
+            "animationEasingUpdate": "cubicOut",
+            "animationDelayUpdate": 0,
+            "data": [
+                "\u767e\u5ea6",
+                "\u5fae\u4fe1",
+                "\u5b98\u7f51",
+                "\u6296\u97f3",
+                "\u76f4\u64ad",
+                "Google",
+                "\u5c0f\u7ea2\u4e66",
+                "GEO",
+                "ChatGPT"
+            ]
+        }
+    ],
     "color": [
         "#b8c9e0"
     ],
@@ -212,6 +222,8 @@
             "text": "\u5e73\u53f0/\u6e20\u9053\u8bcd",
             "target": "blank",
             "subtarget": "blank",
+            "left": "center",
+            "top": "1.5%",
             "padding": 5,
             "itemGap": 10,
             "textAlign": "auto",
@@ -219,13 +231,14 @@
             "triggerEvent": false,
             "textStyle": {
                 "color": "#e8ecf2",
-                "fontSize": 20,
+                "fontWeight": "bold",
+                "fontSize": 22,
                 "richInheritPlainLabel": true
             }
         }
     ]
 };
-        chart_b75ba7bceeb64292a3dc9535f5957e37.setOption(option_b75ba7bceeb64292a3dc9535f5957e37);
+        chart_31a9fc9b984d46c7bceeff32fc474b23.setOption(option_31a9fc9b984d46c7bceeff32fc474b23);
     </script>
 </body>
 </html>

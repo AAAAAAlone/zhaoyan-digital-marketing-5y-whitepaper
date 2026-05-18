@@ -16,6 +16,8 @@ DATA = ROOT / "assets" / "data"
 CHARTS.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
 
+W, H = "1920px", "1080px"
+
 MSG_TYPES = [
     ("文本", 250605), ("链接/文件", 53921), ("表情", 17092),
     ("图片", 14541), ("系统", 5567), ("其他", 1534),
@@ -78,14 +80,9 @@ PAIN_YEAR = {
     "2022": {"SEO": 427, "官网": 300, "销售": 276, "GEO": 0},
     "2023": {"SEO": 399, "销售": 277, "官网": 273, "GEO": 0},
     "2024": {"SEO": 467, "销售": 156, "官网": 155, "GEO": 0},
-    "2025": {"SEO": 244, "GEO": 741, "官网": 74, "sales": 81},
-    "2026": {"SEO": 66, "GEO": 735, "官网": 49, "sales": 21},
+    "2025": {"SEO": 244, "GEO": 741, "官网": 74, "销售": 81},
+    "2026": {"SEO": 66, "GEO": 735, "官网": 49, "销售": 21},
 }
-# fix key
-for y in PAIN_YEAR:
-    if "sales" in PAIN_YEAR[y]:
-        PAIN_YEAR[y]["销售"] = PAIN_YEAR[y].pop("sales")
-
 SPEAKERS = [
     ("赵岩", 52960), ("Zhaoy07331", 34881), ("始熊君", 27502), ("加玮", 10198),
     ("司司", 7595), ("邹叔Jerry", 5924), ("雍熙-Paul", 5662), ("R-市场", 4275),
@@ -102,64 +99,155 @@ PLATFORM = [
 ]
 
 
-def _axis(t: ChartTheme) -> opts.AxisOpts:
-    return opts.AxisOpts(
-        axislabel_opts=opts.LabelOpts(color=t.text),
-        splitline_opts=opts.SplitLineOpts(is_show=True, linestyle_opts=opts.LineStyleOpts(color=t.grid)),
+def _init(t: ChartTheme):
+    return opts.InitOpts(width=W, height=H, bg_color=t.bg)
+
+
+def _title(t: ChartTheme, text: str) -> opts.TitleOpts:
+    return opts.TitleOpts(
+        title=text,
+        pos_left="center",
+        pos_top="1.5%",
+        title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=22, font_weight="bold"),
     )
 
 
-def _pie(t: ChartTheme, title: str, data: list[tuple[str, int]], radius=None) -> Pie:
-    radius = radius or ["42%", "68%"]
+def _legend(t: ChartTheme, n: int) -> opts.LegendOpts:
+    """Bottom horizontal legend; scroll when many series."""
+    kw: dict = dict(
+        orient="horizontal",
+        pos_bottom="0.5%",
+        pos_left="center",
+        item_gap=12,
+        item_width=20,
+        item_height=11,
+        textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=11),
+    )
+    if n > 6:
+        kw["type_"] = "scroll"
+        kw["page_icon_size"] = 12
+    return opts.LegendOpts(**kw)
+
+
+def _cat_axis(t: ChartTheme) -> opts.AxisOpts:
+    return opts.AxisOpts(
+        type_="category",
+        axislabel_opts=opts.LabelOpts(color=t.text, font_size=12),
+        axisline_opts=opts.AxisLineOpts(linestyle_opts=opts.LineStyleOpts(color=t.axis)),
+    )
+
+
+def _val_axis(t: ChartTheme, pct: bool = False, max_v: int | None = None) -> opts.AxisOpts:
+    fmt = "{value}%" if pct else None
+    return opts.AxisOpts(
+        type_="value",
+        max_=max_v,
+        min_=0 if max_v else None,
+        axislabel_opts=opts.LabelOpts(color=t.text, font_size=12, formatter=fmt),
+        splitline_opts=opts.SplitLineOpts(
+            is_show=True, linestyle_opts=opts.LineStyleOpts(color=t.grid)
+        ),
+    )
+
+
+def _pie(t: ChartTheme, title: str, data: list[tuple[str, int]]) -> Pie:
+    n = len(data)
     return (
-        Pie(init_opts=opts.InitOpts(width="1920px", height="1080px", bg_color=t.bg))
+        Pie(init_opts=_init(t))
         .add(
             "",
             data,
-            radius=radius,
-            center=["40%", "55%"],
-            label_opts=opts.LabelOpts(formatter="{b}\n{d}%", color=t.text, font_size=14),
+            radius=["38%", "58%"],
+            center=["50%", "46%"],
+            label_opts=opts.LabelOpts(
+                formatter="{b}\n{d}%",
+                color=t.text,
+                font_size=11,
+            ),
         )
         .set_colors(list(t.palette))
         .set_global_opts(
-            title_opts=opts.TitleOpts(
-                title=title, pos_left="center",
-                title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=20),
-            ),
-            legend_opts=opts.LegendOpts(
-                pos_right="5%", pos_top="middle",
-                textstyle_opts=opts.TextStyleOpts(color=t.text),
-            ),
+            title_opts=_title(t, title),
+            legend_opts=_legend(t, n),
         )
     )
 
 
-def _bar_h(t: ChartTheme, title: str, names: list, vals: list, horizontal=True) -> Bar:
-    b = Bar(init_opts=opts.InitOpts(width="1920px", height="1080px", bg_color=t.bg))
-    if horizontal:
-        b.add_xaxis(vals).add_yaxis("", names, label_opts=opts.LabelOpts(position="right", color=t.text))
-        b.reversal_axis()
-    else:
-        b.add_xaxis(names).add_yaxis("", vals, label_opts=opts.LabelOpts(position="top", color=t.text))
-    return b.set_colors([t.palette[1]]).set_global_opts(
-        title_opts=opts.TitleOpts(title=title, title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=20)),
-        xaxis_opts=_axis(t),
-        yaxis_opts=_axis(t),
+def _bar_v(t: ChartTheme, title: str, cats: list, vals: list) -> Bar:
+    b = (
+        Bar(init_opts=_init(t))
+        .add_xaxis(cats)
+        .add_yaxis(
+            "",
+            vals,
+            label_opts=opts.LabelOpts(is_show=False),
+            category_gap="28%",
+        )
+    )
+    return (
+        b.set_colors([t.palette[1]])
+        .set_global_opts(
+            title_opts=_title(t, title),
+            legend_opts=opts.LegendOpts(is_show=False),
+            xaxis_opts=_cat_axis(t),
+            yaxis_opts=_val_axis(t),
+        )
+    )
+
+
+def _bar_h(t: ChartTheme, title: str, cats: list, vals: list) -> Bar:
+    b = (
+        Bar(init_opts=_init(t))
+        .add_xaxis(cats)
+        .add_yaxis("", vals, label_opts=opts.LabelOpts(is_show=False))
+        .reversal_axis()
+    )
+    return (
+        b.set_colors([t.palette[1]])
+        .set_global_opts(
+            title_opts=_title(t, title),
+            legend_opts=opts.LegendOpts(is_show=False),
+            xaxis_opts=_val_axis(t),
+            yaxis_opts=_cat_axis(t),
+        )
     )
 
 
 def _stack_percent(t: ChartTheme, title: str, years: list, series: dict[str, list[float]]) -> Bar:
-    b = Bar(init_opts=opts.InitOpts(width="1920px", height="1080px", bg_color=t.bg))
-    b.add_xaxis(years)
+    """Vertical 100% stacked bars — years on X, % on Y."""
+    n_leg = len(series)
+    b = Bar(init_opts=_init(t)).add_xaxis(years)
     for name, vals in series.items():
-        b.add_yaxis(name, vals, stack="total", category_gap="30%", label_opts=opts.LabelOpts(is_show=False))
+        b.add_yaxis(
+            name,
+            vals,
+            stack="total",
+            category_gap="22%",
+            label_opts=opts.LabelOpts(is_show=False),
+        )
     return (
         b.set_colors(list(t.palette))
         .set_global_opts(
-            title_opts=opts.TitleOpts(title=title, title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=20)),
-            legend_opts=opts.LegendOpts(pos_top="8%", textstyle_opts=opts.TextStyleOpts(color=t.text)),
-            xaxis_opts=opts.AxisOpts(max_=100, axislabel_opts=opts.LabelOpts(formatter="{value}%", color=t.text)),
-            yaxis_opts=_axis(t),
+            title_opts=_title(t, title),
+            legend_opts=_legend(t, n_leg),
+            xaxis_opts=_cat_axis(t),
+            yaxis_opts=_val_axis(t, pct=True, max_v=100),
+        )
+    )
+
+
+def _line_multi(t: ChartTheme, title: str, x: list, series: dict[str, list]) -> Line:
+    n = len(series)
+    chart = Line(init_opts=_init(t)).add_xaxis(x)
+    for name, vals in series.items():
+        chart.add_yaxis(name, vals, is_smooth=True, label_opts=opts.LabelOpts(is_show=False))
+    return (
+        chart.set_colors(list(t.palette))
+        .set_global_opts(
+            title_opts=_title(t, title),
+            legend_opts=_legend(t, n),
+            xaxis_opts=_cat_axis(t),
+            yaxis_opts=_val_axis(t),
         )
     )
 
@@ -192,18 +280,19 @@ def sankey_share(t: ChartTheme) -> Sankey:
             if v > 0:
                 links.append({"source": f"{y0}·{topic}", "target": f"{y1}·{topic}", "value": v})
     return (
-        Sankey(init_opts=opts.InitOpts(width="1920px", height="1080px", bg_color=t.bg))
+        Sankey(init_opts=_init(t))
         .add(
-            "", nodes, links,
+            "",
+            nodes,
+            links,
             linestyle_opt=opts.LineStyleOpts(opacity=0.35, curve=0.5, color="source"),
-            label_opts=opts.LabelOpts(color=t.text, font_size=11),
-            node_gap=14, node_width=22,
+            label_opts=opts.LabelOpts(color=t.text, font_size=10),
+            node_gap=12,
+            node_width=20,
         )
         .set_global_opts(
-            title_opts=opts.TitleOpts(
-                title="议题结构五年迁移",
-                title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=20),
-            ),
+            title_opts=_title(t, "议题结构五年迁移"),
+            legend_opts=opts.LegendOpts(is_show=False),
         )
     )
 
@@ -223,11 +312,11 @@ def build_charts(t: ChartTheme) -> list[tuple[str, object]]:
     charts = [
         ("c01-msg-type", _pie(t, "消息类型构成", MSG_TYPES)),
         ("c02-groups", _pie(t, "各班级消息量", GROUPS)),
-        ("c03-speaker-tier", _pie(t, "发言者层级", TIERS, ["45%", "70%"])),
-        ("c04-year-volume", _bar_h(t, "年度消息量", YEARS, YEAR_VOL, False)),
-        ("c05-month-top15", _bar_h(t, "月度 Top15", [m for m, _ in MONTH_TOP], [v for _, v in MONTH_TOP], False)),
-        ("c06-quarter-top12", _bar_h(t, "季度 Top12", [q for q, _ in QUARTER_TOP], [v for _, v in QUARTER_TOP], False)),
-        ("c07-halfyear", _bar_h(t, "半年度消息量", [h for h, _ in HALF], [v for _, v in HALF], False)),
+        ("c03-speaker-tier", _pie(t, "发言者层级", TIERS)),
+        ("c04-year-volume", _bar_v(t, "年度消息量", YEARS, YEAR_VOL)),
+        ("c05-month-top15", _bar_v(t, "月度 Top15", [m for m, _ in MONTH_TOP], [v for _, v in MONTH_TOP])),
+        ("c06-quarter-top12", _bar_v(t, "季度 Top12", [q for q, _ in QUARTER_TOP], [v for _, v in QUARTER_TOP])),
+        ("c07-halfyear", _bar_v(t, "半年度消息量", [h for h, _ in HALF], [v for _, v in HALF])),
         ("c08-l1-share-year", _stack_percent(t, "营销 L1 议题占比", YEARS, l1_share_series())),
         ("c09-l1-sankey-share", sankey_share(t)),
         ("c11-l1-all", _pie(t, "营销 L1 议题命中", L1_TOPICS)),
@@ -235,39 +324,38 @@ def build_charts(t: ChartTheme) -> list[tuple[str, object]]:
         ("c14-pain", _pie(t, "痛点场景 Top6", PAIN)),
         ("c15-pain-share-year", _stack_percent(t, "痛点结构占比", YEARS, pain_share_series())),
         ("c17-speakers-top10", _bar_h(t, "发言人 Top10", [n for n, _ in SPEAKERS], [v for _, v in SPEAKERS])),
-        ("c18-hours", _bar_h(t, "24 小时分布", [str(i) for i in range(24)], HOURS, False)),
-        ("c19-silence-by-class", _bar_h(t, "各班沉默率", [c for c, _ in SILENCE], [v for _, v in SILENCE], False)),
-        ("c21-platform-l2", _bar_h(t, "平台/渠道词", [n for n, _ in PLATFORM], [v for _, v in PLATFORM], False)),
+        ("c18-hours", _bar_v(t, "24 小时分布", [str(i) for i in range(24)], HOURS)),
+        ("c19-silence-by-class", _bar_h(t, "各班沉默率 %", [c for c, _ in SILENCE], [v for _, v in SILENCE])),
+        ("c21-platform-l2", _bar_h(t, "平台/渠道词", [n for n, _ in PLATFORM], [v for _, v in PLATFORM])),
+        (
+            "c10-l1-trend-abs",
+            _line_multi(
+                t,
+                "核心议题命中 × 年",
+                YEARS,
+                {k: [L1_YEAR[y].get(k, 0) for y in YEARS] for k in ["线索", "SEO", "GEO"]},
+            ),
+        ),
+        (
+            "c16-pain-trend",
+            _line_multi(
+                t,
+                "痛点命中 × 年",
+                YEARS,
+                {k: [PAIN_YEAR[y].get(k, 0) for y in YEARS] for k in ["SEO", "GEO", "销售"]},
+            ),
+        ),
+        ("c20-zhao-by-year", _line_multi(t, "赵岩年度发言量", YEARS, {"赵岩": ZHAO_YEAR})),
+        ("c22-geo-vs-lead-2026", _bar_v(t, "2026 GEO vs 线索", ["GEO·AI", "线索·销售"], [622, 287])),
     ]
-    line_l1 = Line(init_opts=opts.InitOpts(width="1920px", height="1080px", bg_color=t.bg)).add_xaxis(YEARS)
-    for topic in ["线索", "SEO", "GEO"]:
-        line_l1.add_yaxis(topic, [L1_YEAR[y].get(topic, 0) for y in YEARS], is_smooth=True)
-    charts.append(("c10-l1-trend-abs", line_l1.set_colors(list(t.palette[:3])).set_global_opts(
-        title_opts=opts.TitleOpts(title="核心议题命中 × 年", title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=20)),
-        xaxis_opts=_axis(t), yaxis_opts=_axis(t),
-    )))
-
-    line_pain = Line(init_opts=opts.InitOpts(width="1920px", height="1080px", bg_color=t.bg)).add_xaxis(YEARS)
-    for k in ["SEO", "GEO", "销售"]:
-        line_pain.add_yaxis(k, [PAIN_YEAR[y].get(k, 0) for y in YEARS], is_smooth=True)
-    charts.append(("c16-pain-trend", line_pain.set_colors(list(t.palette[:3])).set_global_opts(
-        title_opts=opts.TitleOpts(title="痛点命中 × 年", title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=20)),
-        xaxis_opts=_axis(t), yaxis_opts=_axis(t),
-    )))
-
-    line_z = Line(init_opts=opts.InitOpts(width="1920px", height="1080px", bg_color=t.bg)).add_xaxis(YEARS)
-    line_z.add_yaxis("赵岩", ZHAO_YEAR, is_smooth=True)
-    charts.append(("c20-zhao-by-year", line_z.set_colors([t.palette[1]]).set_global_opts(
-        title_opts=opts.TitleOpts(title="赵岩年度发言量", title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=20)),
-        xaxis_opts=_axis(t), yaxis_opts=_axis(t),
-    )))
-
-    charts.append(("c22-geo-vs-lead-2026", _bar_h(t, "2026 GEO vs 线索", ["GEO·AI", "线索·销售"], [622, 287], False)))
 
     exp = json.loads((ROOT / "expand-stats.json").read_text(encoding="utf-8"))
     ind_map = {
-        "SaaS/企业服务/软件": "SaaS", "制造/工业/工业互联网": "制造",
-        "营销/广告/传媒/公关": "营销", "教育/培训": "教育", "出海/外贸": "出海",
+        "SaaS/企业服务/软件": "SaaS",
+        "制造/工业/工业互联网": "制造",
+        "营销/广告/传媒/公关": "营销",
+        "教育/培训": "教育",
+        "出海/外贸": "出海",
     }
     ind_keys = list(ind_map.values())
     ind_series = {k: [] for k in ind_keys}
@@ -292,7 +380,7 @@ def export_png(chart, stem: str, theme: ChartTheme) -> None:
             browser = p.chromium.launch()
             page = browser.new_page(viewport={"width": 1920, "height": 1080})
             page.goto(html.resolve().as_uri())
-            page.wait_for_timeout(1000)
+            page.wait_for_timeout(1200)
             page.screenshot(path=str(png), full_page=False)
             browser.close()
         if theme.name == "light":
@@ -319,6 +407,10 @@ def main():
         "charts": stems,
         "themes": ["light", "dark"],
         "l1_year": L1_YEAR,
+        "l1_share_percent": {
+            y: {k: round(L1_YEAR[y][k] / sum(L1_YEAR[y].values()) * 100, 2) for k in TOPICS_ORDER}
+            for y in YEARS
+        },
     })
     save_json("msg-types.json", MSG_TYPES)
     save_json("l1-topics.json", L1_TOPICS)

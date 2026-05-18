@@ -8,11 +8,11 @@
     
 </head>
 <body >
-    <div id="eb889106e6cc4f2b83ee4c1381baba47" class="chart-container" style="width:1920px; height:1080px; "></div>
+    <div id="2f687befe7524d9f86b44455d5c213df" class="chart-container" style="width:1920px; height:1080px; "></div>
     <script>
-        var chart_eb889106e6cc4f2b83ee4c1381baba47 = echarts.init(
-            document.getElementById('eb889106e6cc4f2b83ee4c1381baba47'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_eb889106e6cc4f2b83ee4c1381baba47 = {
+        var chart_2f687befe7524d9f86b44455d5c213df = echarts.init(
+            document.getElementById('2f687befe7524d9f86b44455d5c213df'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_2f687befe7524d9f86b44455d5c213df = {
     "backgroundColor": "#0a1f3d",
     "animation": true,
     "animationThreshold": 2000,
@@ -47,7 +47,7 @@
             "stackStrategy": "samesign",
             "cursor": "pointer",
             "barMinHeight": 0,
-            "barCategoryGap": "20%",
+            "barCategoryGap": "28%",
             "barGap": "30%",
             "large": false,
             "largeThreshold": 400,
@@ -57,9 +57,7 @@
             "zlevel": 0,
             "z": 2,
             "label": {
-                "show": true,
-                "position": "top",
-                "color": "#e8ecf2",
+                "show": false,
                 "margin": 8,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
@@ -72,7 +70,7 @@
                 ""
             ],
             "selected": {},
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -120,16 +118,27 @@
     },
     "xAxis": [
         {
+            "type": "category",
             "show": true,
             "scale": false,
             "nameLocation": "end",
             "nameGap": 15,
             "nameTruncate": {},
             "nameMoveOverlap": true,
+            "axisLine": {
+                "show": true,
+                "onZero": true,
+                "onZeroAxisIndex": 0,
+                "lineStyle": {
+                    "show": false,
+                    "color": "#8fa3bf"
+                }
+            },
             "axisLabel": {
                 "show": true,
                 "color": "#e8ecf2",
                 "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -142,8 +151,7 @@
             "splitLine": {
                 "show": true,
                 "lineStyle": {
-                    "show": false,
-                    "color": "rgba(232,236,242,.15)"
+                    "show": false
                 }
             },
             "animation": true,
@@ -171,6 +179,7 @@
     ],
     "yAxis": [
         {
+            "type": "value",
             "show": true,
             "scale": false,
             "nameLocation": "end",
@@ -181,6 +190,7 @@
                 "show": true,
                 "color": "#e8ecf2",
                 "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -216,6 +226,8 @@
             "text": "\u534a\u5e74\u5ea6\u6d88\u606f\u91cf",
             "target": "blank",
             "subtarget": "blank",
+            "left": "center",
+            "top": "1.5%",
             "padding": 5,
             "itemGap": 10,
             "textAlign": "auto",
@@ -223,13 +235,14 @@
             "triggerEvent": false,
             "textStyle": {
                 "color": "#e8ecf2",
-                "fontSize": 20,
+                "fontWeight": "bold",
+                "fontSize": 22,
                 "richInheritPlainLabel": true
             }
         }
     ]
 };
-        chart_eb889106e6cc4f2b83ee4c1381baba47.setOption(option_eb889106e6cc4f2b83ee4c1381baba47);
+        chart_2f687befe7524d9f86b44455d5c213df.setOption(option_2f687befe7524d9f86b44455d5c213df);
     </script>
 </body>
 </html>

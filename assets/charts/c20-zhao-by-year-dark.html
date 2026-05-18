@@ -8,11 +8,11 @@
     
 </head>
 <body >
-    <div id="2387e6e1996e4b9c88c1e16095f10908" class="chart-container" style="width:1920px; height:1080px; "></div>
+    <div id="428944dec37840fa88bb36bc05879302" class="chart-container" style="width:1920px; height:1080px; "></div>
     <script>
-        var chart_2387e6e1996e4b9c88c1e16095f10908 = echarts.init(
-            document.getElementById('2387e6e1996e4b9c88c1e16095f10908'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_2387e6e1996e4b9c88c1e16095f10908 = {
+        var chart_428944dec37840fa88bb36bc05879302 = echarts.init(
+            document.getElementById('428944dec37840fa88bb36bc05879302'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_428944dec37840fa88bb36bc05879302 = {
     "backgroundColor": "#0a1f3d",
     "animation": true,
     "animationThreshold": 2000,
@@ -65,7 +65,7 @@
             ],
             "hoverAnimation": true,
             "label": {
-                "show": true,
+                "show": false,
                 "margin": 8,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
@@ -89,10 +89,18 @@
             ],
             "selected": {},
             "show": true,
+            "left": "center",
+            "bottom": "0.5%",
+            "orient": "horizontal",
             "padding": 5,
-            "itemGap": 10,
-            "itemWidth": 25,
-            "itemHeight": 14,
+            "itemGap": 12,
+            "itemWidth": 20,
+            "itemHeight": 11,
+            "textStyle": {
+                "color": "#e8ecf2",
+                "fontSize": 11,
+                "richInheritPlainLabel": true
+            },
             "backgroundColor": "transparent",
             "borderColor": "#ccc",
             "borderRadius": 0,
@@ -136,16 +144,27 @@
     },
     "xAxis": [
         {
+            "type": "category",
             "show": true,
             "scale": false,
             "nameLocation": "end",
             "nameGap": 15,
             "nameTruncate": {},
             "nameMoveOverlap": true,
+            "axisLine": {
+                "show": true,
+                "onZero": true,
+                "onZeroAxisIndex": 0,
+                "lineStyle": {
+                    "show": false,
+                    "color": "#8fa3bf"
+                }
+            },
             "axisLabel": {
                 "show": true,
                 "color": "#e8ecf2",
                 "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -158,8 +177,7 @@
             "splitLine": {
                 "show": true,
                 "lineStyle": {
-                    "show": false,
-                    "color": "rgba(232,236,242,.15)"
+                    "show": false
                 }
             },
             "animation": true,
@@ -182,6 +200,7 @@
     ],
     "yAxis": [
         {
+            "type": "value",
             "show": true,
             "scale": false,
             "nameLocation": "end",
@@ -192,6 +211,7 @@
                 "show": true,
                 "color": "#e8ecf2",
                 "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -219,7 +239,16 @@
         }
     ],
     "color": [
-        "#b8c9e0"
+        "#e8ecf2",
+        "#b8c9e0",
+        "#8fb3dc",
+        "#5b8fc9",
+        "#3d7ab8",
+        "#e8d4b0",
+        "#c4a574",
+        "#a88bc4",
+        "#6bc4b0",
+        "#d49a8a"
     ],
     "title": [
         {
@@ -227,6 +256,8 @@
             "text": "\u8d75\u5ca9\u5e74\u5ea6\u53d1\u8a00\u91cf",
             "target": "blank",
             "subtarget": "blank",
+            "left": "center",
+            "top": "1.5%",
             "padding": 5,
             "itemGap": 10,
             "textAlign": "auto",
@@ -234,13 +265,14 @@
             "triggerEvent": false,
             "textStyle": {
                 "color": "#e8ecf2",
-                "fontSize": 20,
+                "fontWeight": "bold",
+                "fontSize": 22,
                 "richInheritPlainLabel": true
             }
         }
     ]
 };
-        chart_2387e6e1996e4b9c88c1e16095f10908.setOption(option_2387e6e1996e4b9c88c1e16095f10908);
+        chart_428944dec37840fa88bb36bc05879302.setOption(option_428944dec37840fa88bb36bc05879302);
     </script>
 </body>
 </html>

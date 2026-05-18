@@ -8,11 +8,11 @@
     
 </head>
 <body >
-    <div id="a9e706e62bbb44adbe9474b1a9def2e0" class="chart-container" style="width:1920px; height:1080px; "></div>
+    <div id="fa50936c744b44ff8d78c4f7fb0a0744" class="chart-container" style="width:1920px; height:1080px; "></div>
     <script>
-        var chart_a9e706e62bbb44adbe9474b1a9def2e0 = echarts.init(
-            document.getElementById('a9e706e62bbb44adbe9474b1a9def2e0'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_a9e706e62bbb44adbe9474b1a9def2e0 = {
+        var chart_fa50936c744b44ff8d78c4f7fb0a0744 = echarts.init(
+            document.getElementById('fa50936c744b44ff8d78c4f7fb0a0744'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_fa50936c744b44ff8d78c4f7fb0a0744 = {
     "backgroundColor": "#f1f3f5",
     "animation": true,
     "animationThreshold": 2000,
@@ -30,16 +30,16 @@
             "type": "bar",
             "legendHoverLink": true,
             "data": [
-                "\u8d75\u5ca9",
-                "Zhaoy07331",
-                "\u59cb\u718a\u541b",
-                "\u52a0\u73ae",
-                "\u53f8\u53f8",
-                "\u90b9\u53d4Jerry",
-                "\u96cd\u7199-Paul",
-                "R-\u5e02\u573a",
-                "\u6728\u8fb0",
-                "\u725b\u78ca"
+                52960,
+                34881,
+                27502,
+                10198,
+                7595,
+                5924,
+                5662,
+                4275,
+                3651,
+                3639
             ],
             "realtimeSort": false,
             "showBackground": false,
@@ -56,9 +56,7 @@
             "zlevel": 0,
             "z": 2,
             "label": {
-                "show": true,
-                "position": "right",
-                "color": "#0a1f3d",
+                "show": false,
                 "margin": 8,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
@@ -71,7 +69,7 @@
                 ""
             ],
             "selected": {},
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -119,6 +117,7 @@
     },
     "xAxis": [
         {
+            "type": "value",
             "show": true,
             "scale": false,
             "nameLocation": "end",
@@ -129,6 +128,7 @@
                 "show": true,
                 "color": "#0a1f3d",
                 "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -157,16 +157,27 @@
     ],
     "yAxis": [
         {
+            "type": "category",
             "show": true,
             "scale": false,
             "nameLocation": "end",
             "nameGap": 15,
             "nameTruncate": {},
             "nameMoveOverlap": true,
+            "axisLine": {
+                "show": true,
+                "onZero": true,
+                "onZeroAxisIndex": 0,
+                "lineStyle": {
+                    "show": false,
+                    "color": "#5a6d85"
+                }
+            },
             "axisLabel": {
                 "show": true,
                 "color": "#0a1f3d",
                 "margin": 8,
+                "fontSize": 12,
                 "richInheritPlainLabel": true,
                 "valueAnimation": false
             },
@@ -179,8 +190,7 @@
             "splitLine": {
                 "show": true,
                 "lineStyle": {
-                    "show": false,
-                    "color": "rgba(10,31,61,.12)"
+                    "show": false
                 }
             },
             "animation": true,
@@ -192,16 +202,16 @@
             "animationEasingUpdate": "cubicOut",
             "animationDelayUpdate": 0,
             "data": [
-                52960,
-                34881,
-                27502,
-                10198,
-                7595,
-                5924,
-                5662,
-                4275,
-                3651,
-                3639
+                "\u8d75\u5ca9",
+                "Zhaoy07331",
+                "\u59cb\u718a\u541b",
+                "\u52a0\u73ae",
+                "\u53f8\u53f8",
+                "\u90b9\u53d4Jerry",
+                "\u96cd\u7199-Paul",
+                "R-\u5e02\u573a",
+                "\u6728\u8fb0",
+                "\u725b\u78ca"
             ]
         }
     ],
@@ -214,6 +224,8 @@
             "text": "\u53d1\u8a00\u4eba Top10",
             "target": "blank",
             "subtarget": "blank",
+            "left": "center",
+            "top": "1.5%",
             "padding": 5,
             "itemGap": 10,
             "textAlign": "auto",
@@ -221,13 +233,14 @@
             "triggerEvent": false,
             "textStyle": {
                 "color": "#0a1f3d",
-                "fontSize": 20,
+                "fontWeight": "bold",
+                "fontSize": 22,
                 "richInheritPlainLabel": true
             }
         }
     ]
 };
-        chart_a9e706e62bbb44adbe9474b1a9def2e0.setOption(option_a9e706e62bbb44adbe9474b1a9def2e0);
+        chart_fa50936c744b44ff8d78c4f7fb0a0744.setOption(option_fa50936c744b44ff8d78c4f7fb0a0744);
     </script>
 </body>
 </html>
