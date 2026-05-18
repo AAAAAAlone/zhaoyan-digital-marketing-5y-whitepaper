@@ -17,6 +17,11 @@ CHARTS.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
 
 W, H = "1920px", "1080px"
+# 导出 1920×1080，字号按「大屏可读」设，避免默认 12px 在整图里显得极小
+FS_TITLE = 30
+FS_AXIS = 17
+FS_LEGEND = 14
+FS_PIE = 15
 
 MSG_TYPES = [
     ("文本", 250605), ("链接/文件", 53921), ("表情", 17092),
@@ -107,32 +112,62 @@ def _title(t: ChartTheme, text: str) -> opts.TitleOpts:
     return opts.TitleOpts(
         title=text,
         pos_left="center",
-        pos_top="1.5%",
-        title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=22, font_weight="bold"),
+        pos_top="0.5%",
+        title_textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=FS_TITLE, font_weight="bold"),
     )
 
 
 def _legend(t: ChartTheme, n: int) -> opts.LegendOpts:
-    """Bottom horizontal legend; scroll when many series."""
-    kw: dict = dict(
+    """图例统一在底部；多系列时加宽区域以便自动折行。"""
+    return opts.LegendOpts(
+        type_="plain",
         orient="horizontal",
-        pos_bottom="0.5%",
+        pos_bottom="1%",
         pos_left="center",
-        item_gap=12,
-        item_width=20,
-        item_height=11,
-        textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=11),
+        width="94%",
+        item_gap=16,
+        item_width=24,
+        item_height=14,
+        textstyle_opts=opts.TextStyleOpts(color=t.text, font_size=FS_LEGEND),
     )
-    if n > 6:
-        kw["type_"] = "scroll"
-        kw["page_icon_size"] = 12
-    return opts.LegendOpts(**kw)
 
 
-def _cat_axis(t: ChartTheme) -> opts.AxisOpts:
+def _fit_grid(chart, *, legend_n: int = 0, top: int = 7) -> object:
+    """显式 grid，让绘图区占满画布（默认 ECharts 留白很大）。"""
+    bottom = 8
+    if legend_n >= 10:
+        bottom = 20
+    elif legend_n >= 6:
+        bottom = 14
+    elif legend_n > 0:
+        bottom = 11
+    chart.options["grid"] = [
+        {
+            "left": "2%",
+            "right": "2%",
+            "top": f"{top}%",
+            "bottom": f"{bottom}%",
+            "containLabel": True,
+        }
+    ]
+    return chart
+
+
+def _cat_gap(n: int) -> str:
+    if n <= 6:
+        return "10%"
+    if n <= 12:
+        return "16%"
+    return "22%"
+
+
+def _cat_axis(t: ChartTheme, n_cats: int = 6, rotate: bool = False) -> opts.AxisOpts:
+    rot = 35 if rotate or n_cats > 10 else (25 if n_cats > 7 else 0)
     return opts.AxisOpts(
         type_="category",
-        axislabel_opts=opts.LabelOpts(color=t.text, font_size=12),
+        axislabel_opts=opts.LabelOpts(
+            color=t.text, font_size=FS_AXIS, rotate=rot, interval=0, margin=12
+        ),
         axisline_opts=opts.AxisLineOpts(linestyle_opts=opts.LineStyleOpts(color=t.axis)),
     )
 
@@ -143,7 +178,7 @@ def _val_axis(t: ChartTheme, pct: bool = False, max_v: int | None = None) -> opt
         type_="value",
         max_=max_v,
         min_=0 if max_v else None,
-        axislabel_opts=opts.LabelOpts(color=t.text, font_size=12, formatter=fmt),
+        axislabel_opts=opts.LabelOpts(color=t.text, font_size=FS_AXIS, formatter=fmt),
         splitline_opts=opts.SplitLineOpts(
             is_show=True, linestyle_opts=opts.LineStyleOpts(color=t.grid)
         ),
@@ -152,17 +187,17 @@ def _val_axis(t: ChartTheme, pct: bool = False, max_v: int | None = None) -> opt
 
 def _pie(t: ChartTheme, title: str, data: list[tuple[str, int]]) -> Pie:
     n = len(data)
-    return (
+    chart = (
         Pie(init_opts=_init(t))
         .add(
             "",
             data,
-            radius=["38%", "58%"],
-            center=["50%", "46%"],
+            radius=["30%", "68%"],
+            center=["50%", "50%"],
             label_opts=opts.LabelOpts(
                 formatter="{b}\n{d}%",
                 color=t.text,
-                font_size=11,
+                font_size=FS_PIE,
             ),
         )
         .set_colors(list(t.palette))
@@ -171,9 +206,13 @@ def _pie(t: ChartTheme, title: str, data: list[tuple[str, int]]) -> Pie:
             legend_opts=_legend(t, n),
         )
     )
+    # 饼图用 grid 控制标题/图例留白，环更大
+    chart.options["grid"] = [{"left": 0, "right": 0, "top": "6%", "bottom": "14%", "containLabel": False}]
+    return chart
 
 
 def _bar_v(t: ChartTheme, title: str, cats: list, vals: list) -> Bar:
+    n = len(cats)
     b = (
         Bar(init_opts=_init(t))
         .add_xaxis(cats)
@@ -181,40 +220,50 @@ def _bar_v(t: ChartTheme, title: str, cats: list, vals: list) -> Bar:
             "",
             vals,
             label_opts=opts.LabelOpts(is_show=False),
-            category_gap="28%",
+            category_gap=_cat_gap(n),
+            bar_width="62%" if n <= 8 else "78%",
         )
     )
-    return (
+    b = (
         b.set_colors([t.palette[1]])
         .set_global_opts(
             title_opts=_title(t, title),
             legend_opts=opts.LegendOpts(is_show=False),
-            xaxis_opts=_cat_axis(t),
+            xaxis_opts=_cat_axis(t, n, rotate=n > 8),
             yaxis_opts=_val_axis(t),
         )
     )
+    return _fit_grid(b, legend_n=0, top=8)
 
 
 def _bar_h(t: ChartTheme, title: str, cats: list, vals: list) -> Bar:
+    n = len(cats)
     b = (
         Bar(init_opts=_init(t))
         .add_xaxis(cats)
-        .add_yaxis("", vals, label_opts=opts.LabelOpts(is_show=False))
+        .add_yaxis(
+            "",
+            vals,
+            label_opts=opts.LabelOpts(is_show=False),
+            category_gap="14%",
+            bar_width="55%",
+        )
         .reversal_axis()
     )
-    return (
+    b = (
         b.set_colors([t.palette[1]])
         .set_global_opts(
             title_opts=_title(t, title),
             legend_opts=opts.LegendOpts(is_show=False),
             xaxis_opts=_val_axis(t),
-            yaxis_opts=_cat_axis(t),
+            yaxis_opts=_cat_axis(t, n),
         )
     )
+    return _fit_grid(b, legend_n=0, top=8)
 
 
 def _stack_percent(t: ChartTheme, title: str, years: list, series: dict[str, list[float]]) -> Bar:
-    """Vertical 100% stacked bars — years on X, % on Y."""
+    """竖向 100% 堆叠：年份在 X，占比在 Y。"""
     n_leg = len(series)
     b = Bar(init_opts=_init(t)).add_xaxis(years)
     for name, vals in series.items():
@@ -222,34 +271,39 @@ def _stack_percent(t: ChartTheme, title: str, years: list, series: dict[str, lis
             name,
             vals,
             stack="total",
-            category_gap="22%",
+            category_gap="12%",
+            bar_width="58%",
             label_opts=opts.LabelOpts(is_show=False),
         )
-    return (
+    b = (
         b.set_colors(list(t.palette))
         .set_global_opts(
             title_opts=_title(t, title),
             legend_opts=_legend(t, n_leg),
-            xaxis_opts=_cat_axis(t),
+            xaxis_opts=_cat_axis(t, len(years)),
             yaxis_opts=_val_axis(t, pct=True, max_v=100),
         )
     )
+    return _fit_grid(b, legend_n=n_leg, top=9)
 
 
 def _line_multi(t: ChartTheme, title: str, x: list, series: dict[str, list]) -> Line:
     n = len(series)
     chart = Line(init_opts=_init(t)).add_xaxis(x)
     for name, vals in series.items():
-        chart.add_yaxis(name, vals, is_smooth=True, label_opts=opts.LabelOpts(is_show=False))
-    return (
+        chart.add_yaxis(
+            name, vals, is_smooth=True, label_opts=opts.LabelOpts(is_show=False), symbol_size=8
+        )
+    chart = (
         chart.set_colors(list(t.palette))
         .set_global_opts(
             title_opts=_title(t, title),
             legend_opts=_legend(t, n),
-            xaxis_opts=_cat_axis(t),
+            xaxis_opts=_cat_axis(t, len(x)),
             yaxis_opts=_val_axis(t),
         )
     )
+    return _fit_grid(chart, legend_n=n, top=9)
 
 
 def l1_share_series() -> dict[str, list[float]]:
@@ -279,22 +333,24 @@ def sankey_share(t: ChartTheme) -> Sankey:
             v = round(d1.get(topic, 0) / total1 * 100, 2)
             if v > 0:
                 links.append({"source": f"{y0}·{topic}", "target": f"{y1}·{topic}", "value": v})
-    return (
+    chart = (
         Sankey(init_opts=_init(t))
         .add(
             "",
             nodes,
             links,
             linestyle_opt=opts.LineStyleOpts(opacity=0.35, curve=0.5, color="source"),
-            label_opts=opts.LabelOpts(color=t.text, font_size=10),
-            node_gap=12,
-            node_width=20,
+            label_opts=opts.LabelOpts(color=t.text, font_size=FS_LEGEND),
+            node_gap=10,
+            node_width=28,
         )
         .set_global_opts(
             title_opts=_title(t, "议题结构五年迁移"),
             legend_opts=opts.LegendOpts(is_show=False),
         )
     )
+    chart.options["grid"] = [{"left": "1%", "right": "1%", "top": "7%", "bottom": "4%", "containLabel": True}]
+    return chart
 
 
 def pain_share_series() -> dict[str, list[float]]:

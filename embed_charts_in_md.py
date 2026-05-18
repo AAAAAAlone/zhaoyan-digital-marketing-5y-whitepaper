@@ -10,11 +10,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 MD = ROOT / "赵岩的数字营销实战群-五年汇报白皮书-by加玮.md"
-RAW = "https://raw.githubusercontent.com/AAAAAAlone/zhaoyan-digital-marketing-5y-whitepaper/main/assets/charts"
-
-
 def img(alt: str, stem: str) -> str:
-    return f"\n![{alt}]({RAW}/{stem}.png)\n"
+    return f"\n![{alt}](assets/charts/{stem}.png)\n"
+
+
+def normalize_chart_urls(text: str) -> str:
+    """统一为仓库内相对路径，本地 / GitHub 均可预览。"""
+    return re.sub(
+        r"!\[([^\]]*)\]\((?:https://raw\.githubusercontent\.com/[^)]+/)?assets/charts/([a-z0-9-]+)\.png\)",
+        r"![\1](assets/charts/\2.png)",
+        text,
+    )
 
 
 def remove_injected_blocks(text: str) -> str:
@@ -149,10 +155,11 @@ def main():
     text = remove_injected_blocks(text)
     text = rebuild_core_data(text)
     text = embed_inline(text)
+    text = normalize_chart_urls(text)
     text = re.sub(r"\n{4,}", "\n\n\n", text)
     MD.write_text(text, encoding="utf-8")
     n_img = len(re.findall(r"!\[", text))
-    print(f"Wrote {MD} — {n_img} images, GitHub raw URLs")
+    print(f"Wrote {MD} — {n_img} images, paths assets/charts/*.png")
 
 
 if __name__ == "__main__":
